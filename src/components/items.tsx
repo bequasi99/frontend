@@ -152,8 +152,12 @@ const ScrollContainer = styled.div`
   .pdf-icon {
     animation: rotateImage 3.5s infinite;
     display: block;
-    max-width: 100%;
+    max-width: 80%;
     margin: 0 auto;
+
+    @media ${props => props.theme.breakpoint.sm} {
+      max-width: 100%;
+    }
   }
 
   .pdf-link-name {
