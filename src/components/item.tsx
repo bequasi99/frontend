@@ -22,7 +22,9 @@ const Item = props => {
         <span className="small-font">{item.download.raw.name}</span>
       </div>
       <div className="mobile-pdf">
-        <img src={item.icon.url} className="pdf-icon" alt="pdf download" />
+        <div className="pdf-icon-wrapper">
+          <img src={item.icon.url} className="pdf-icon" alt="pdf download" />
+        </div>
       </div>
     </a>
   )
