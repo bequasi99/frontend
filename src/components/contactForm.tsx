@@ -159,7 +159,7 @@ const ContactForm = () => {
             }}
             validationSchema={ContactSchema}
             onSubmit={(values, { setSubmitting, setFieldValue, resetForm }) => {
-              fetch("http://backend-nine.now.sh/contact?no-cache=1", {
+              fetch("https://backend-nine.now.sh/contact?no-cache=1", {
                 method: "POST",
                 headers: {
                   "Content-Type": "application/x-www-form-urlencoded",
