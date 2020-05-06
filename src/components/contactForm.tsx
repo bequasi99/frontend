@@ -11,7 +11,8 @@ const FormDiv = styled.div`
     margin: 25px 0;
   }
 
-  legend {
+  legend,
+  label {
     display: none;
   }
 
@@ -183,6 +184,7 @@ const ContactForm = () => {
               <Form name="contact-form" method="post">
                 <legend>Contact Form</legend>
                 <div className="input-field">
+                  <label htmlFor="name">Name</label>
                   <Field
                     name="name"
                     placeholder="Name"
@@ -191,6 +193,7 @@ const ContactForm = () => {
                   />
                 </div>
                 <div className="input-field">
+                  <label htmlFor="email">Email</label>
                   <Field
                     name="email"
                     placeholder="Email"
@@ -199,6 +202,7 @@ const ContactForm = () => {
                   />
                 </div>
                 <div className="input-field">
+                  <label htmlFor="message">Message</label>
                   <Field
                     name="message"
                     placeholder="How can we help?"
