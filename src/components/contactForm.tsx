@@ -11,13 +11,9 @@ const FormDiv = styled.div`
     margin: 25px 0;
   }
 
-  legend {
-    display: none;
-  }
-
+  legend,
   label {
-    position: absolute;
-    z-index: -1;
+    display: none;
   }
 
   .input-field {
@@ -191,6 +187,7 @@ const ContactForm = () => {
                   <label htmlFor="name">Name</label>
                   <Field
                     name="name"
+                    id="name"
                     placeholder="Name"
                     className="input medium-font"
                     error={touched.name && errors.name}
@@ -200,6 +197,7 @@ const ContactForm = () => {
                   <label htmlFor="email">Email</label>
                   <Field
                     name="email"
+                    id="email"
                     placeholder="Email"
                     className="input medium-font"
                     error={touched.email && errors.email}
@@ -209,6 +207,7 @@ const ContactForm = () => {
                   <label htmlFor="message">Message</label>
                   <Field
                     name="message"
+                    id="message"
                     placeholder="How can we help?"
                     component="textarea"
                     className="textarea medium-font"
