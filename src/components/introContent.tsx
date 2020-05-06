@@ -18,8 +18,7 @@ const Scroll = styled.div`
     padding: 25px 35px;
   }
 
-  img {
-    height: 65%;
+  svg {
     margin-left: 20px;
     animation-duration: 2s;
     animation-iteration-count: infinite;
@@ -60,7 +59,18 @@ const IntroContent = () => {
       </div>
       <Scroll className="large-font">
         Please Scroll
-        <img src={arrow} alt="Please scroll" />
+        <svg
+          width="32"
+          height="70%"
+          viewBox="0 0 12 23"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M6.01607 23L0.995804 17.9797L0.963623 17.143H4.72882L4.69664 0L7.30331 0L7.33549 17.143H11.0041L11.0363 17.9797L6.01607 23Z"
+            fill="white"
+          />
+        </svg>
       </Scroll>
     </div>
   )
