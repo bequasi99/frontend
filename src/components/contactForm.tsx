@@ -11,9 +11,13 @@ const FormDiv = styled.div`
     margin: 25px 0;
   }
 
-  legend,
-  label {
+  legend {
     display: none;
+  }
+
+  label {
+    position: absolute;
+    z-index: -1;
   }
 
   .input-field {
