@@ -145,8 +145,8 @@ const ScrollContainer = styled.div`
   .pdf-icon-wrapper {
     display: inline-block;
     backface-visibility: hidden;
-    -webkit-perspective: 500px;
-    perspective: 500px;
+    -webkit-perspective: 1000px;
+    perspective: 1000px;
   }
 
   .pdf-icon {
