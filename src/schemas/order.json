@@ -1,0 +1,27 @@
+{
+  "Main": {
+    "title": {
+      "type": "StructuredText",
+      "config": {
+        "single": "heading1, heading2, heading3, heading4, heading5, heading6",
+        "label": "Title"
+      }
+    },
+    "order": {
+      "type": "Group",
+      "config": {
+        "fields": {
+          "item": {
+            "type": "Link",
+            "config": {
+              "select": "document",
+              "customtypes": ["item"],
+              "label": "Item"
+            }
+          }
+        },
+        "label": "Order"
+      }
+    }
+  }
+}
