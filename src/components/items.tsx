@@ -153,13 +153,10 @@ const ScrollContainer = styled.div`
   }
 
   .pdf-icon {
+    animation: rotateImage 3.5s infinite;
     display: block;
     max-width: 100%;
     margin: 0 auto;
-
-    @media ${props => props.theme.breakpoint.lg} {
-      animation: rotateImage 3.5s infinite;
-    }
   }
 
   .pdf-link-name {
