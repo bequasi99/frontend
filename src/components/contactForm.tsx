@@ -159,16 +159,13 @@ const ContactForm = () => {
             }}
             validationSchema={ContactSchema}
             onSubmit={(values, { setSubmitting, setFieldValue, resetForm }) => {
-              fetch(
-                "https://wequasibackend.adamwright90.now.sh/contact?no-cache=1",
-                {
-                  method: "POST",
-                  headers: {
-                    "Content-Type": "application/x-www-form-urlencoded",
-                  },
-                  body: encode({ "form-name": "contact-form", ...values }),
-                }
-              )
+              fetch("https://backend-cv1mtzxos.now.sh/contact?no-cache=1", {
+                method: "POST",
+                headers: {
+                  "Content-Type": "application/x-www-form-urlencoded",
+                },
+                body: encode({ "form-name": "contact-form", ...values }),
+              })
                 .then(() => {
                   setFieldValue("success", true)
 
