@@ -144,10 +144,12 @@ const ScrollContainer = styled.div`
 
   .pdf-icon-wrapper {
     display: inline-block;
-    transform: translateZ(100px);
+    background-color: red;
+    transform: translateZ(500px);
     backface-visibility: hidden;
     -webkit-perspective: 500px;
     perspective: 500px;
+    position: relative;
   }
 
   .pdf-icon {

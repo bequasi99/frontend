@@ -1,6 +1,5 @@
 {
   "version": 2,
-  "name": "wequasi",
   "builds": [
     {
       "src": "package.json",
