@@ -242,6 +242,7 @@ const items = ({ handleInview }) => {
   const data = useStaticQuery(query)
 
   const items = data.prismicOrder.data.order
+
   const middle = items.length / 2
 
   return (
