@@ -19,11 +19,25 @@ const Scroll = styled.div`
   }
 
   svg {
-    margin-left: 20px;
+    height: 38%;
+    margin-left: 10px;
     animation-duration: 2s;
     animation-iteration-count: infinite;
     animation-name: arrow-bounce;
     animation-timing-function: cubic-bezier(0.28, 0.84, 0.42, 1);
+
+    @media ${props => props.theme.breakpoint.md} {
+      height: 50%;
+    }
+
+    @media ${props => props.theme.breakpoint.lg} {
+      margin-left: 20px;
+      height: 60%;
+    }
+
+    @media ${props => props.theme.breakpoint.xl} {
+      height: 70%;
+    }
   }
 
   @keyframes arrow-bounce {

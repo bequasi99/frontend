@@ -106,19 +106,17 @@ const FormDiv = styled.div`
   .submit {
     color: ${props => props.theme.colors.yellow};
     cursor: pointer;
+    text-align: left;
     opacity: 1;
     transition: opacity 0.5s ease;
+    position: relative;
 
     svg {
-      height: 100%;
-      margin-left: 10px;
-      position: relative;
-      top: 2px;
-
-      @media ${props => props.theme.breakpoint.md} {
-        margin-left: 20px;
-        top: 0;
-      }
+      width: 10%;
+      display: inline-block;
+      margin-left: 20px;
+      position: absolute;
+      top: 30%;
     }
   }
 
@@ -221,8 +219,6 @@ const ContactForm = () => {
                     <button type="submit" className="large-font submit">
                       Send Message
                       <svg
-                        width="48"
-                        height="100%"
                         viewBox="0 0 24 24"
                         fill="none"
                         xmlns="http://www.w3.org/2000/svg"
@@ -238,8 +234,6 @@ const ContactForm = () => {
                     <div className="large-font submit">
                       Message Sent
                       <svg
-                        width="36"
-                        height="100%"
                         viewBox="0 0 36 36"
                         fill="none"
                         xmlns="http://www.w3.org/2000/svg"
