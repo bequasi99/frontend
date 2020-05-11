@@ -13,6 +13,7 @@
     "gatsby-plugin-robots-txt": "^1.5.0",
     "gatsby-plugin-scroll-reveal": "0.0.6",
     "gatsby-source-prismic": "^3.0.1",
+    "imagesloaded": "^4.1.4",
     "polished": "^3.5.1",
     "react": "^16.9.0",
     "react-cookie-consent": "^3.0.0",

@@ -153,9 +153,8 @@ const ContactForm = () => {
       <div className="item">
         <FormDiv>
           <h2 className="large-font">
-            <u>be quasi</u> activities can work for you.
-            <br />
-            Get in touch to find out more
+            <u>be quasi</u> activities can work for you. Get in touch to find
+            out more. 
           </h2>
           <Formik
             initialValues={{
@@ -215,7 +214,7 @@ const ContactForm = () => {
                   <Field
                     name="message"
                     id="message"
-                    placeholder="How can we help?"
+                    placeholder="Type your message in here..."
                     component="textarea"
                     className="textarea medium-font"
                     error={touched.message && errors.message}
