@@ -103,22 +103,14 @@ const FormDiv = styled.div`
     transition: opacity 0.5s ease;
 
     .svg-holder {
-      display: inline-block;
-      position: relative;
+      display: inline-flex;
+      align-self: center;
       margin-left: 10px;
-      width: 25px;
-
-      @media ${props => props.theme.breakpoint.md} {
-        width: 30px;
-      }
-
-      @media ${props => props.theme.breakpoint.lg} {
-        width: 55px;
-      }
     }
 
     svg {
-      display: block;
+      height: 0.65em;
+      width: 0.65em;
     }
   }
 

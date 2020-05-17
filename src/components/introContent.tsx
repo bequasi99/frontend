@@ -21,20 +21,13 @@ const Scroll = styled.div`
 
   .svg-holder {
     margin-left: 10px;
-    display: inline-block;
-    width: 12px;
-
-    @media ${props => props.theme.breakpoint.md} {
-      width: 15px;
-    }
-
-    @media ${props => props.theme.breakpoint.lg} {
-      width: 30px;
-    }
+    display: inline-flex;
+    align-self: center;
   }
 
   svg {
-    display: block;
+    height: 0.8em;
+    width: 0.8em;
     animation-duration: 2s;
     animation-iteration-count: infinite;
     animation-name: arrow-bounce;
@@ -43,22 +36,22 @@ const Scroll = styled.div`
 
   @keyframes arrow-bounce {
     0% {
-      transform: scale(1, 1) translateY(0);
+      transform: translateY(0);
     }
     10% {
-      transform: scale(1.1, 0.9) translateY(0);
+      transform: translateY(0);
     }
     30% {
-      transform: scale(0.9, 1.1) translateY(-25px);
+      transform: translateY(-25px);
     }
     50% {
-      transform: scale(1.05, 0.95) translateY(0);
+      transform: translateY(0);
     }
     64% {
-      transform: scale(1, 1) translateY(0);
+      transform: translateY(0);
     }
     100% {
-      transform: scale(1, 1) translateY(0);
+      transform: translateY(0);
     }
   }
 `
@@ -77,6 +70,8 @@ const IntroContent = () => {
         Please scroll
         <div className="svg-holder">
           <svg
+            width="12"
+            height="23"
             viewBox="0 0 12 23"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
