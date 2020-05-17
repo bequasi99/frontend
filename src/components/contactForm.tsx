@@ -101,6 +101,7 @@ const FormDiv = styled.div`
     cursor: pointer;
     opacity: 1;
     transition: opacity 0.5s ease;
+    line-height: 128%;
 
     .svg-holder {
       display: inline-flex;
