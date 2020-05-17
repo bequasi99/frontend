@@ -68,13 +68,13 @@ const IntroContent = () => {
     <div id="introContent">
       <div className="item">
         <p className="large-font">
-          <u>be quasi</u> is a research project that uses experimental design
+          be quasi is a research project that uses experimental design
           activities to help people work creatively and organisations better
           know how people work. Click below to download some examples.
         </p>
       </div>
       <Scroll className="large-font">
-        Please Scroll
+        Please scroll
         <div className="svg-holder">
           <svg
             viewBox="0 0 12 23"

@@ -4,11 +4,11 @@ const MainContent = () => {
   return (
     <div id="mainContent" className="item">
       <p className="large-font">
-        <u>be quasi</u> is being developed by Tim Miller as a response to
-        working in design, studying design at London’s Royal College of Art and
-        developing a PhD in design at Goldsmiths, University of London. These
-        experiences inspired the development of a type of design-led research
-        called 'quasi-design'.
+        be quasi is being developed by Tim Miller as a response to working in
+        design, studying design at London’s Royal College of Art and developing
+        a PhD in design at Goldsmiths, University of London. These experiences
+        inspired the development of a type of design-led research called
+        'quasi-design'.
       </p>
     </div>
   )

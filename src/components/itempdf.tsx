@@ -5,14 +5,16 @@ const Itempdf = props => {
   const item = props.data
   const [ref, inView, entry] = useInView({
     rootMargin: "-1px 0px",
-    threshold: 1,
+    threshold: 0.9,
   })
+
+  console.log("inview", inView)
 
   return (
     <a
       ref={ref}
       href={item.download.url}
-      className={inView ? "item item-snap" : "item"}
+      className={inView ? "item item-pdf item-snap" : "item item-pdf"}
       target="_blank"
       rel="noreferrer"
     >

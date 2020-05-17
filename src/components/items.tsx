@@ -50,7 +50,7 @@ const ScrollContainer = styled.div`
     pointer-events: all;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     text-decoration: none;
     color: inherit;
     transition: background-color 0.5s ease;
@@ -75,11 +75,19 @@ const ScrollContainer = styled.div`
     }
   }
 
-  .item-snap {
-    background-color: #edffde;
+  .item-pdf {
+    background-color: #ffffff;
 
     &:nth-child(even) {
-      background-color: #edffde;
+      background-color: #ffffff;
+    }
+  }
+
+  .item-snap {
+    background-color: #edffde !important;
+
+    &:nth-child(even) {
+      background-color: #edffde !important;
     }
   }
 
@@ -157,6 +165,14 @@ const ScrollContainer = styled.div`
 
     @media ${props => props.theme.breakpoint.sm} {
       max-width: 100%;
+    }
+
+    @media ${props => props.theme.breakpoint.lg} {
+      width: 406px;
+    }
+
+    @media ${props => props.theme.breakpoint.xl} {
+      width: 480px;
     }
   }
 

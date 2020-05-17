@@ -73,20 +73,20 @@ const FixedContainer = styled.div`
 
   .item {
     color: white;
-    /*height: 100vh;*/
-    padding: 14px 18px;
+    height: 100vh;
+    padding: 14px 18px 0 18px;
     width: 100%;
 
     @media ${props => props.theme.breakpoint.md} {
-      padding: 12px 15px;
+      padding: 12px 15px 0 15px;
     }
 
     @media ${props => props.theme.breakpoint.lg} {
-      padding: 21px 25px;
+      padding: 21px 25px 0 25px;
     }
 
     @media ${props => props.theme.breakpoint.xl} {
-      padding: 25px 35px;
+      padding: 25px 35px 0 35px;
     }
   }
 `

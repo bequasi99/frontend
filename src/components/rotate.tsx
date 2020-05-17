@@ -20,11 +20,6 @@ const RotateImage = styled.div`
 
   svg {
     width: 45%;
-    margin-bottom: 10px;
-  }
-
-  span {
-    color: white;
   }
 `
 
@@ -37,7 +32,6 @@ const Rotate = () => {
           stroke="white"
         />
       </svg>
-      <span className="medium-font ">Rotate to portrait</span>
     </RotateImage>
   )
 }

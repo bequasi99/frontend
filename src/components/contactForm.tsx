@@ -6,7 +6,7 @@ import Footer from "../components/footer"
 
 const FormDiv = styled.div`
   form {
-    margin: 25px 0;
+    margin-top: 20px;
   }
 
   legend {
@@ -36,7 +36,6 @@ const FormDiv = styled.div`
     background-color: ${props => props.theme.colors.form};
     color: ${props => props.theme.colors.white};
     width: 100%;
-    border: none;
     padding: 10px 15px 10px 15px;
 
     @media ${props => props.theme.breakpoint.md} {
@@ -65,12 +64,8 @@ const FormDiv = styled.div`
     resize: none;
 
     @media ${props => props.theme.breakpoint.md} {
-      height: 200px;
+      height: 150px;
       padding: 15px 15px 15px 15px;
-    }
-
-    @media ${props => props.theme.breakpoint.lg} {
-      height: 250px;
     }
 
     @media ${props => props.theme.breakpoint.xl} {
@@ -223,7 +218,7 @@ const ContactForm = () => {
                 <div className="input-field">
                   {!values.success && (
                     <button type="submit" className="large-font submit">
-                      Send Message
+                      Send message
                       <div className="svg-holder">
                         <svg
                           viewBox="0 0 24 24"
@@ -240,7 +235,7 @@ const ContactForm = () => {
                   )}
                   {values.success && (
                     <div className="large-font submit">
-                      Message Sent
+                      Message sent
                       <div className="svg-holder">
                         <svg
                           viewBox="0 0 36 36"

@@ -5,7 +5,7 @@ const Item = props => {
   const item = props.data
   const [ref, inView, entry] = useInView({
     rootMargin: "-1px 0px",
-    threshold: 1,
+    threshold: 0.9,
   })
 
   return (

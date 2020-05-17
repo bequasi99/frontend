@@ -26,15 +26,30 @@ const FooterContainer = styled.footer`
   .copyright {
     display: flex;
     flex: 0 0 100%;
+    align-items: flex-start;
     margin-bottom: 10px;
+
+    @media ${props => props.theme.breakpoint.md} {
+      flex: 0 0 20%;
+    }
 
     img {
       display: inline-block;
       margin-right: 5px;
     }
+
+    span {
+      line-height: 18px;
+    }
   }
 
   .pages {
+    flex: 0 0 100%;
+
+    @media ${props => props.theme.breakpoint.lg} {
+      flex: 0 0 40%;
+    }
+
     li {
       display: inline-block;
       margin-right: 10px;
@@ -50,11 +65,11 @@ const FooterContainer = styled.footer`
   }
 
   .credits {
-    width: 100%;
+    flex: 0 0 100%;
     margin-bottom: 20px;
 
     @media ${props => props.theme.breakpoint.lg} {
-      width: 50%;
+      flex: 0 0 40%;
       margin-bottom: 0;
     }
 
@@ -86,7 +101,7 @@ const Footer = () => {
     <FooterContainer className="small-font">
       <div className="copyright">
         <img src={CC} alt="copyright" />
-        bequasi
+        <span>be quasi</span>
       </div>
       <div className="credits">
         <div>
