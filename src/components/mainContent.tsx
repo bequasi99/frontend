@@ -8,7 +8,7 @@ const MainContent = () => {
         design, studying design at London’s Royal College of Art and developing
         a PhD in design at Goldsmiths, University of London. These experiences
         inspired the development of a type of design-led research called
-        'quasi-design'.
+        ‘quasi-design'.
       </p>
     </div>
   )
