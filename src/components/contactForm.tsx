@@ -155,8 +155,8 @@ const ContactForm = () => {
       <div className="item">
         <FormDiv>
           <h2 className="large-font">
-            <u>be quasi</u> activities can work for you. Get in touch to find
-            out more. 
+            be quasi activities can work for you. Get in touch to find out
+            more. 
           </h2>
           <Formik
             initialValues={{
