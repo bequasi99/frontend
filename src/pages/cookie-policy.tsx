@@ -28,7 +28,7 @@ const CookiePolicy = () => {
       {({ modal, closeTo }) => (
         <CookiePolicyContainer>
           {modal ? (
-            <Link to={closeTo} className="close medium-font">
+            <Link to={closeTo} className="close large-font">
               Close
             </Link>
           ) : (

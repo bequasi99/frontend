@@ -18,13 +18,23 @@ const TypeStyles = css`
       toSize: "12px",
     })};
 
+    @media ${props => props.theme.breakpoint.md} {
+      line-height: 150%;
+      letter-spacing: 0.02em;
+      ${fluidRange({
+        prop: "font-size",
+        fromSize: "12px",
+        toSize: "12px",
+      })};
+    }
+
     @media ${props => props.theme.breakpoint.lg} {
       line-height: 167%;
       letter-spacing: 0.005em;
       ${fluidRange({
         prop: "font-size",
         fromSize: "12px",
-        toSize: "16px",
+        toSize: "15px",
       })};
     }
 
@@ -63,7 +73,7 @@ const TypeStyles = css`
       ${fluidRange({
         prop: "font-size",
         fromSize: "19px",
-        toSize: "31px",
+        toSize: "30px",
       })};
     }
 
@@ -91,7 +101,7 @@ const TypeStyles = css`
       ${fluidRange({
         prop: "font-size",
         fromSize: "37px",
-        toSize: "39px",
+        toSize: "49px",
       })};
     }
 

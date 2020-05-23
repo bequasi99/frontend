@@ -14,6 +14,7 @@ const Cookie = styled.div`
     bottom: 0;
     right: 0;
     padding: 8px 25px;
+    line-height: 130%;
 
     @media ${props => props.theme.breakpoint.md} {
       flex-direction: row;

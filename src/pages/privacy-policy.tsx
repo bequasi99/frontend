@@ -30,7 +30,7 @@ const PrivacyPolicy = () => {
       {({ modal, closeTo }) => (
         <PrivacyPolicyContainer>
           {modal ? (
-            <Link to={closeTo} className="close medium-font">
+            <Link to={closeTo} className="close large-font">
               Close
             </Link>
           ) : (

@@ -55,10 +55,6 @@ const ScrollContainer = styled.div`
     color: inherit;
     transition: background-color 0.5s ease;
 
-    @media ${props => props.theme.breakpoint.md} {
-      padding: 12px 15px;
-    }
-
     @media ${props => props.theme.breakpoint.lg} {
       min-height: 450px;
       height: 50vh;
@@ -92,7 +88,11 @@ const ScrollContainer = styled.div`
   }
 
   .heading {
-    margin-bottom: 25px;
+    margin-bottom: 13px;
+
+    @media ${props => props.theme.breakpoint.lg} {
+      margin-bottom: 25px;
+    }
   }
 
   .item-screen {
@@ -121,7 +121,7 @@ const ScrollContainer = styled.div`
 
   .pdf-link-name-mobile {
     overflow: hidden;
-    margin: 25px 0;
+    margin-top: 15px;
 
     @media ${props => props.theme.breakpoint.lg} {
       display: none;
