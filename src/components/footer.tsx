@@ -88,12 +88,12 @@ const FooterContainer = styled.footer`
     color: ${props => props.theme.colors.grey};
     text-decoration: none;
     opacity: 1;
-    transition: opacity 0.5s ease;
+    transition: color 0.5s ease;
     white-space: nowrap;
   }
 
   a:hover {
-    opacity: 0.6;
+    color: white;
   }
 `
 const Footer = () => {

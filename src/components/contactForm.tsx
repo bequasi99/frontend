@@ -81,6 +81,8 @@ const FormDiv = styled.div`
   .input::placeholder,
   .textarea::placeholder {
     color: ${props => props.theme.colors.grey};
+    transition: transform 0.5s ease;
+    transform: translateY(0);
   }
 
   .input:hover::placeholder,
@@ -88,6 +90,16 @@ const FormDiv = styled.div`
   .input:focus::placeholder,
   .textarea:focus::placeholder {
     color: ${props => props.theme.colors.white};
+  }
+
+  .input:hover::placeholder,
+  .textarea:hover::placeholder {
+    transform: translateY(-5px);
+  }
+
+  .input:focus::placeholder,
+  .textarea:focus::placeholder {
+    transform: translateY(0);
   }
 
   .textarea:hover,
@@ -100,8 +112,9 @@ const FormDiv = styled.div`
     color: ${props => props.theme.colors.yellow};
     cursor: pointer;
     opacity: 1;
-    transition: opacity 0.5s ease;
     line-height: 128%;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    transform: translateY(0);
 
     .svg-holder {
       display: inline-flex;
@@ -117,6 +130,7 @@ const FormDiv = styled.div`
 
   .submit:hover {
     color: ${props => props.theme.colors.yellowHover};
+    transform: translateY(-5px);
     opacity: 0.6;
   }
 `
