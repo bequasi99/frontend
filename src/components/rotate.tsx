@@ -14,7 +14,7 @@ const RotateImage = styled.div`
   align-items: center;
   flex-direction: column;
 
-  @media only screen and (min-width: 320px) and (max-width: 900px) and (orientation: landscape) {
+  @media only screen and (min-width: 320px) and (max-width: 980px) and (orientation: landscape) {
     display: flex;
   }
 
