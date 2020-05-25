@@ -38,7 +38,7 @@ const FooterContainer = styled.footer`
       margin-right: 5px;
     }
 
-    span {
+    a {
       line-height: 18px;
     }
   }
@@ -101,7 +101,13 @@ const Footer = () => {
     <FooterContainer className="small-font">
       <div className="copyright">
         <img src={CC} alt="copyright" />
-        <span>be quasi</span>
+        <a
+          href="https://creativecommons.org/licenses/by-nc/4.0/"
+          target="_blank"
+          rel="noreferrer"
+        >
+          be quasi
+        </a>
       </div>
       <div className="credits">
         <div>

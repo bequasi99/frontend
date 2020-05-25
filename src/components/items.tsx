@@ -42,7 +42,7 @@ const ScrollContainer = styled.div`
   }
 
   .item {
-    background-color: #bdbdbd;
+    background-color: #ffffff;
     min-height: 350px;
     width: 100%;
     padding: 14px 18px 14px 18px;
@@ -67,7 +67,7 @@ const ScrollContainer = styled.div`
     }
 
     &:nth-child(even) {
-      background-color: #f2f2f2;
+      background-color: #ffffff;
     }
   }
 
@@ -172,7 +172,7 @@ const ScrollContainer = styled.div`
     }
 
     @media ${props => props.theme.breakpoint.xl} {
-      width: 480px;
+      width: 400px;
     }
   }
 
