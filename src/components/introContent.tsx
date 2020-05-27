@@ -28,31 +28,6 @@ const Scroll = styled.div`
   svg {
     height: 0.8em;
     width: 0.8em;
-    animation-duration: 2s;
-    animation-iteration-count: infinite;
-    animation-name: arrow-bounce;
-    animation-timing-function: cubic-bezier(0.28, 0.84, 0.42, 1);
-  }
-
-  @keyframes arrow-bounce {
-    0% {
-      transform: translateY(0);
-    }
-    10% {
-      transform: translateY(0);
-    }
-    30% {
-      transform: translateY(-25px);
-    }
-    50% {
-      transform: translateY(0);
-    }
-    64% {
-      transform: translateY(0);
-    }
-    100% {
-      transform: translateY(0);
-    }
   }
 `
 

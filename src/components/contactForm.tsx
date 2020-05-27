@@ -58,7 +58,6 @@ const FormDiv = styled.div`
     background-color: ${props => props.theme.colors.form};
     color: ${props => props.theme.colors.white};
     width: 100%;
-    border: none;
     height: 100px;
     padding: 10px 15px 10px 15px;
     resize: none;
@@ -111,7 +110,6 @@ const FormDiv = styled.div`
   .submit {
     color: ${props => props.theme.colors.yellow};
     cursor: pointer;
-    opacity: 1;
     line-height: 128%;
     transition: transform 0.5s ease, opacity 0.5s ease;
     transform: translateY(0);
@@ -131,7 +129,6 @@ const FormDiv = styled.div`
   .submit:hover {
     color: ${props => props.theme.colors.yellowHover};
     transform: translateY(-5px);
-    opacity: 0.6;
   }
 `
 
