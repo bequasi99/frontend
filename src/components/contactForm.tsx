@@ -127,7 +127,7 @@ const FormDiv = styled.div`
   }
 
   .submit:hover {
-    color: ${props => props.theme.colors.yellowHover};
+    color: #ee7ff0;
     transform: translateY(-5px);
   }
 `
