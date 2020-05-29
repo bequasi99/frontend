@@ -51,7 +51,11 @@ const TypeStyles = css`
 
   .large-font {
     line-height: 117%;
-    font-size: 28px;
+    font-size: 24px;
+
+    @media ${props => props.theme.breakpoint.sm} {
+      font-size: 26px;
+    }
 
     @media ${props => props.theme.breakpoint.md} {
       line-height: 110%;
@@ -60,10 +64,15 @@ const TypeStyles = css`
 
     @media ${props => props.theme.breakpoint.lg} {
       line-height: 110%;
-      font-size: 49px;
+      font-size: 47px;
     }
 
     @media ${props => props.theme.breakpoint.xl} {
+      line-height: 107%;
+      font-size: 59px;
+    }
+
+    @media ${props => props.theme.breakpoint.xxl} {
       line-height: 107%;
       font-size: 72px;
     }
