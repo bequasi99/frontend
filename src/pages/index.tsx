@@ -3,7 +3,6 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import FixedContent from "../components/fixedContent"
 import Items from "../components/items"
-import Rotate from "../components/rotate"
 
 const IndexPage = () => {
   useEffect(() => {
@@ -45,7 +44,6 @@ const IndexPage = () => {
       <SEO title="Home" />
       <FixedContent />
       <Items handleInview={handleInview} />
-      <Rotate />
     </Layout>
   )
 }
