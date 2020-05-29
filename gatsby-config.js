@@ -58,7 +58,7 @@ module.exports = {
       options: {
         host: `https://wwww.bequasi.com`,
         sitemap: `https://wwww.bequasi.com/sitemap.xml`,
-        policy: [{ userAgent: "*", disallow: "/" }],
+        policy: [{ userAgent: "*", allow: "/" }],
       },
     },
     {
