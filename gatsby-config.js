@@ -56,8 +56,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-robots-txt`,
       options: {
-        host: `https://wwww.bequasi.com`,
-        sitemap: `https://wwww.bequasi.com/sitemap.xml`,
+        host: `https://www.bequasi.com`,
+        sitemap: `https://www.bequasi.com/sitemap.xml`,
         policy: [{ userAgent: "*", allow: "/" }],
       },
     },
