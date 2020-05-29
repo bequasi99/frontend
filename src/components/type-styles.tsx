@@ -29,22 +29,21 @@ const TypeStyles = css`
   .medium-font {
     line-height: 130%;
     letter-spacing: 0.015em;
-    font-size: 17px;
-
-    @media ${props => props.theme.breakpoint.md} {
-      line-height: 130%;
-      font-size: 16px;
-    }
+    font-size: 16px;
 
     @media ${props => props.theme.breakpoint.lg} {
       line-height: 128%;
       letter-spacing: 0.02em;
-      font-size: 19px;
+      font-size: 17px;
     }
 
     @media ${props => props.theme.breakpoint.xl} {
       line-height: 119%;
       letter-spacing: 0.015em;
+      font-size: 22px;
+    }
+
+    @media ${props => props.theme.breakpoint.xxl} {
       font-size: 30px;
     }
   }
