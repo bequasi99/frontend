@@ -7,7 +7,7 @@ const FooterContainer = styled.footer`
   color: ${props => props.theme.colors.grey};
   display: flex;
   width: 100%;
-  padding: 14px 18px;
+  padding: 14px 18px 60px 18px;
   justify-content: flex-start;
   flex-wrap: wrap;
 

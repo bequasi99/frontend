@@ -41,7 +41,7 @@ const CookiePolicy = () => {
           <p className="medium-font">
             This Cookie Policy explains how Be Quasi uses cookies and similar
             technologies to recognize you when you visit the website
-            https://www.bequasi.com/ ("Site"). It explains what these
+            https://www.bequasi.com/ (‘Site'). It explains what these
             technologies are and why they are used, as well as your rights to
             control the use of them.<br></br> In some cases, Be Quasi may use
             cookies to collect personal information or that which becomes
@@ -53,9 +53,9 @@ const CookiePolicy = () => {
             mobile device when you visit a website. Cookies are widely used by
             website owners in order to make their websites work or to work more
             efficiently, as well as to provide reporting information. Cookies
-            set by the website owner (in this case, Be Quasi) are called "first
-            party cookies". Cookies set by parties other than the website owner
-            are called "third party cookies". Third-party cookies enable third
+            set by the website owner (in this case, Be Quasi) are called ‘first
+            party cookies'. Cookies set by parties other than the website owner
+            are called ‘third party cookies'. Third-party cookies enable third
             party features or functionality to be provided on or through the
             website (e.g. like advertising, interactive content and analytics).
             The parties that set these third-party cookies can recognize your
@@ -66,8 +66,8 @@ const CookiePolicy = () => {
           <p className="medium-font">
             Be Quasi uses first and third-party cookies for several reasons.
             Some cookies are required for technical reasons in order for the
-            Site to operate and are referred to as "essential" or "strictly
-            necessary" cookies. Other cookies enable tracking and targeting the
+            Site to operate and are referred to as ‘essential' or ‘strictly
+            necessary' cookies. Other cookies enable tracking and targeting the
             interests of the Site users to enhance the experience on the Site
             and any Online Properties. Third parties serve cookies through the
             Site for advertising, analytics and other purposes. This is
