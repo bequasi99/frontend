@@ -13,7 +13,7 @@ const Cookie = styled.div`
     position: fixed;
     bottom: 0;
     right: 0;
-    padding: 8px 25px;
+    padding: 10px 0px 25px 0px;
     line-height: 130%;
 
     @media ${props => props.theme.breakpoint.md} {
