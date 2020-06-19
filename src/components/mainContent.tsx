@@ -6,7 +6,7 @@ const MainContent = () => {
       <p className="large-font">
         be quasi is being developed by Tim Miller as a response to working in
         and studying design. These experiences inspired a type of design-led 
-        research called "quasi-design".
+        research called quasi-design.
       </p>
     </div>
   )
