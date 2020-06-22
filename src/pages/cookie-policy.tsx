@@ -12,6 +12,7 @@ const CookiePolicyContainer = styled.div`
     text-decoration: none;
     position: absolute;
     top: 0;
+    right: 0;
     padding-right: 15px;
   }
 
