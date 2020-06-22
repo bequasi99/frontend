@@ -6,7 +6,7 @@ import close from "../images/close.svg"
 
 const PrivacyPolicyContainer = styled.div`
   position: relative;
-  padding: 5% 20% 5% 20%;
+  padding: 5% 15% 5% 15%;
 
   .close {
     color: black;
