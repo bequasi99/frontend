@@ -5,14 +5,14 @@ import { ModalRoutingContext } from "gatsby-plugin-modal-routing"
 
 const CookiePolicyContainer = styled.div`
   position: relative;
-  padding: 5% 20% 5% 20%;
+  padding: 5% 15% 5% 15%;
 
   .close {
     color: black;
     text-decoration: none;
     position: absolute;
     top: 0;
-    right: 0;
+    padding-right: 15px;
   }
 
   h2,
