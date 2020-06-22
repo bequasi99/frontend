@@ -14,6 +14,7 @@ const PrivacyPolicyContainer = styled.div`
     position: absolute;
     top: 0;
     right: 0;
+    padding-right: 15px;
   }
 
   h2 {
