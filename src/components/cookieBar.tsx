@@ -4,7 +4,7 @@ import CookieConsent from "react-cookie-consent"
 
 const Cookie = styled.div`
   .cookieConsent {
-    font-size: 12px;
+    font-size: 11px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -14,7 +14,7 @@ const Cookie = styled.div`
     bottom: 0;
     right: 0;
     padding: 8px 25px;
-    line-height: 130%;
+    line-height: 120%;
 
     @media ${props => props.theme.breakpoint.md} {
       flex-direction: row;
@@ -31,18 +31,18 @@ const Cookie = styled.div`
     }
 
     @media ${props => props.theme.breakpoint.xxl} {
-      width: 35%;
+      width: 37%;
     }
 
     div {
-      padding-right: 20px;
+      padding-right: 10px;
       padding-top: 8px;
       padding-bottom: 10px;
     }
   }
 
   button {
-    font-size: 12px;
+    font-size: 11px;
     display: inline-block;
     text-decoration: none;
     border: 1px solid ${props => props.theme.colors.formHover};
