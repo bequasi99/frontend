@@ -31,12 +31,13 @@ const Cookie = styled.div`
     }
 
     @media ${props => props.theme.breakpoint.xxl} {
-      width: 30%;
+      width: 35%;
     }
 
     div {
       padding-right: 20px;
-      padding-bottom: 20px;
+      padding-top: 8px;
+      padding-bottom: 10px;
     }
   }
 
