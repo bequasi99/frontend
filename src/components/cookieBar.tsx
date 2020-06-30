@@ -21,22 +21,32 @@ const Cookie = styled.div`
       flex-direction: row;
       height: 80px;
       padding: 22px 25px;
+    display: flex;
+    align-items: center;
     }
 
     @media ${props => props.theme.breakpoint.lg} {
       width: 50%;
+    display: flex;
+    align-items: center;
     }
 
     @media ${props => props.theme.breakpoint.xl} {
       width: 40%;
+    display: flex;
+    align-items: center;
     }
 
     @media ${props => props.theme.breakpoint.xxl} {
       width: 37%;
+    display: flex;
+    align-items: center;
     }
 
     div {
       padding-right: 10px;
+    display: flex;
+    align-items: center;
     }
   }
 
