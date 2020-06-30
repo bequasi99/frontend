@@ -86,7 +86,7 @@ const FixedContainer = styled.div`
     }
 
     @media ${props => props.theme.breakpoint.xl} {
-      padding: 25px 35px 0 35px;
+      padding: 16px 25px 0 25px;
     }
   }
 `
