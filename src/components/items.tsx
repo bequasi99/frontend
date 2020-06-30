@@ -90,6 +90,10 @@ const ScrollContainer = styled.div`
   .heading {
     margin-bottom: 10px;
 
+    @media ${props => props.theme.breakpoint.md} {
+      margin-bottom: 13px;
+    }
+
     @media ${props => props.theme.breakpoint.lg} {
       margin-bottom: 20px;
     }
