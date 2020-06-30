@@ -6,6 +6,7 @@ const Cookie = styled.div`
   .cookieConsent {
     font-size: 12px;
     display: flex;
+    align-items: center;
     flex-direction: column;
     align-items: flex-start;
     background-color: #ffffff;
@@ -36,8 +37,8 @@ const Cookie = styled.div`
 
     div {
       padding-right: 10px;
-      padding-top: 8px;
-      padding-bottom: 10px;
+      padding-top: 2px;
+      padding-bottom: 2px;
     }
   }
 
