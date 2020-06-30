@@ -88,7 +88,7 @@ const ScrollContainer = styled.div`
   }
 
   .heading {
-    margin-bottom: 13px;
+    margin-bottom: 10px;
 
     @media ${props => props.theme.breakpoint.lg} {
       margin-bottom: 20px;
