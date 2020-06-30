@@ -63,7 +63,7 @@ const ScrollContainer = styled.div`
     }
 
     @media ${props => props.theme.breakpoint.xl} {
-      padding: 25px 35px;
+      padding: 23px 25px;
     }
 
     &:nth-child(even) {
@@ -95,7 +95,7 @@ const ScrollContainer = styled.div`
     }
 
     @media ${props => props.theme.breakpoint.xl} {
-      margin-bottom: 25px;
+      margin-bottom: 20px;
     }
   }
 
