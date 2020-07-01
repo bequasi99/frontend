@@ -102,7 +102,7 @@ const Footer = () => {
       <div className="copyright">
         <img src={CC} alt="copyright" />
         <a
-          href="https://creativecommons.org/licenses/by-nc/4.0/"
+          href="https://creativecommons.org/licenses/by-nc-sa/4.0/"
           target="_blank"
           rel="noreferrer"
         >
