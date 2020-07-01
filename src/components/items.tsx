@@ -190,8 +190,8 @@ const ScrollContainer = styled.div`
     @media ${props => props.theme.breakpoint.lg} {
       display: inline-block;
       position: absolute;
-      bottom: 20px;
-      right: 20px;
+      bottom: 25px;
+      right: 25px;
       color: ${props => props.theme.colors.black};
       width: 100%;
       text-align: right;
