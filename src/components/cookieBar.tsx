@@ -44,7 +44,7 @@ const Cookie = styled.div`
     }
 
     div {
-      padding-right: 10px;
+      padding: 4px 10px 4px 0px;
     display: flex;
     align-items: center;
     }
