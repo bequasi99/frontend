@@ -58,7 +58,7 @@ const PrivacyPolicy = () => {
             Privacy Notice also sets out your rights in respect of the
             processing of your personal data.
             <br /> <br />
-            When Be Quasi talks about “personal data”, this means any
+            When Be Quasi talks about 'personal data', this means any
             information relating to an identified or identifiable living
             individual. Individuals might be identified by reference to a name,
             an identification number, location data, an online identifier (such
