@@ -104,15 +104,15 @@ const PrivacyPolicy = () => {
             personal data directly. <br /> <br />
             This will be the case when, for example, you contact Be Quasi with
             enquiries or complete forms on the Site, subscribe to receive
-            marketing communications or provide feedback. . <br /> <br />
+            marketing communications or provide feedback. <br /> <br />
             - Personal data Be Quasi collects using cookies and other similar
-            technologies . <br /> <br />
+            technologies. <br /> <br />
             When you access and use the Site, Be Quasi will collect certain
             technical information about your equipment, browsing actions and
             patterns. Be Quasi collects this personal data by using cookies and
-            other similar technologies (see Be Quasi’s Cookies Policy).. <br />
+            other similar technologies (see Be Quasi’s Cookies Policy). <br />
             <br />
-            - Personal data received from third parties <br /> <br />
+            - Personal data received from third parties. <br /> <br />
             From time to time, Be Quasi will receive personal data about you
             from third parties. Such third parties may include analytics
             providers, payment providers, hotel and transport providers and
@@ -128,18 +128,18 @@ const PrivacyPolicy = () => {
             platforms).
           </p>
           <h3 className="medium-font">
-            5. Who Be Quasi collects personal data about
+            5. Who Be Quasi collects personal data about.
           </h3>
           <p className="medium-font">
             Be Quasi collects and processes personal data from the following
             people: <br /> <br />
-            - Site visitors
+            - Site visitors.
             <br /> <br /> If you browse the Site, register for updates on the
             Site, contact Be Quasi with an enquiry through the Site, submit a
             complaint through the Site or use any Services available on the
             Site, your personal data will be collected and processed in
             connection with your interaction.
-            <br /> <br />- Customers
+            <br /> <br />- Customers.
             <br /> <br /> If you buy products or services from Be Quasi,
             personal data in connection with the supply of goods or services to
             you may be collected. <br /> <br /> - Event attendees <br /> <br />
@@ -149,14 +149,14 @@ const PrivacyPolicy = () => {
             or feedback form, or another document relating to such an event.
             <br /> <br />
             - Personnel that work for Be Quasi’s partners and suppliers
-            (including subcontractors) <br /> <br /> If you (or your
+            (including subcontractors). <br /> <br /> If you (or your
             organisation) supply products or services to Be Quasi or otherwise
             partner with Be Quasi, Be Quasi may collect and process your
             personal data in connection with the receipt of those products and
             services and/or partnership. This may include personal data included
             in any email or telephone communications or recorded on any document
             relating to an order for the products or services.
-            <br /> <br /> - Job applicants <br /> <br /> If you apply for a job
+            <br /> <br /> - Job applicants. <br /> <br /> If you apply for a job
             with Be Quasi, whether through the Site or otherwise, Be Quasi will
             collect and process your personal data in connection with your
             application.
@@ -165,9 +165,8 @@ const PrivacyPolicy = () => {
           <p className="medium-font">
             Be Quasi uses your personal data for the following purposes: <br />
             <br />
-            <br></br>
-            -Fulfilment of Services <br />
-            <br></br> <br /> Be Quasi collects and maintains personal data that
+            - Fulfilment of Services. <br />
+            <br> Be Quasi collects and maintains personal data that
             you submit for the purpose of supplying Services that you have
             requested from the Site or where Be Quasi contracts with you to
             provide Services. Be Quasi may collect and process your personal
@@ -193,13 +192,13 @@ const PrivacyPolicy = () => {
             Quasi’s legitimate interest or a third party’s legitimate interest
             to use personal data in such a way to ensure that Services are
             provided in an effective, safe and efficient way. <br></br>
-            <br></br> -Linking to social media sites and interacting with Be
+            <br></br> - Linking to social media sites and interacting with Be
             Quasi’s social media pages <br></br>
             <br></br>
             If you click on one of the social media links on the Site or
             otherwise interact with the social media pages such as on Linkedin,
-            Instagram or Twitter (including interacting with any ‘like’ or
-            similar embedded features on the Site or social media accounts) Be
+            Instagram or Twitter (including interacting with any
+            embedded features on the Site or social media accounts) Be
             Quasi and the relevant social media platform may receive information
             relating to such interaction and may share your personal data in
             connection with this purpose. For more information about how Be
@@ -220,7 +219,7 @@ const PrivacyPolicy = () => {
             personal data in such a way to ensure that the Site and Services are
             provided in an effective way and to promote the Site and Services
             via social media. <br></br>
-            <br></br> -Customer service and general enquiries
+            <br></br> - Customer service and general enquiries
             <br></br>
             <br></br>
             The Site features a “Get in touch to find out more” page which
@@ -237,7 +236,7 @@ const PrivacyPolicy = () => {
             above to ensure aiding you with your enquiry and providing a good
             standard of service to you.<br></br>
             <br></br>
-            -Hosting and managing events<br></br>
+            - Hosting and managing events<br></br>
             <br></br>
             From time to time, Be Quasi may organise and host events. Be Quasi
             may process your name and contact information to communicate with
@@ -619,28 +618,28 @@ const PrivacyPolicy = () => {
           <p className="medium-font">
             You have the following rights in relation to the personal data held
             about you. If you would like to exercise any of these rights, please
-            make contact using the details set out on the Contact page.<br></br>
-            - Your right to access<br></br>
+            make contact using the details set out on the Contact page. <br></br>
+            <br></br> - Your right to access. <br></br><br></br>
             If you ask, Be Quasi will confirm whether your personal data is
             being processed and, if so, provide you with a copy of that personal
             data (along with certain other details). If you require additional
             copies, Be Quasi may charge a reasonable fee for producing those
-            additional copies.<br></br>- Your right to rectification<br></br>
-            If the personal data held about you is inaccurate or incomplete, you
+            additional copies. <br></br><br></br> - Your right to rectification. <br></br>
+            <br></br> If the personal data held about you is inaccurate or incomplete, you
             are entitled to have it rectified. If Be Quasi has shared your
             personal data with others, they will be informed of the
             rectification where possible. If you ask, where possible and lawful
             to do so, Be Quasi will tell you who your personal data has been
-            shared with so that you can contact them directly.<br></br>- Your
-            right to erasure<br></br>
+            shared with so that you can contact them directly. <br></br><br></br> - Your
+            right to erasure. <br></br><br></br>
             You can ask Be Quasi to delete or remove your personal data in some
             circumstances, such as where it is no longer needed or where you
             withdraw your consent (where applicable). If your personal data has
             been shared with others, they will be informed about the erasure
             where possible. If you ask, where it is possible and lawful to do
             so, you will be informed of who your personal data has been shared
-            with so that you can contact them directly. <br></br>- Your right to
-            restrict processing<br></br>
+            with so that you can contact them directly. <br></br><br></br> - Your right to
+            restrict processing. <br></br><br></br>
             You can ask Be Quasi to ‘block’ or suppress the processing of your
             personal data in certain circumstances such as where you contest the
             accuracy of that personal data or you object to it being processing
@@ -651,13 +650,13 @@ const PrivacyPolicy = () => {
             shared with others, they will be informed about the restriction
             where it is possible. If you ask, where it is possible and lawful,
             Be Quasi will also tell you who your personal data is shared with so
-            that you can contact them directly.<br></br>- Your right to data
-            portability<br></br>
+            that you can contact them directly. <br></br><br></br> - Your right to data
+            portability. <br></br><br></br>
             You have the right, in certain circumstances, to obtain personal
             data you have provided (in a structured, commonly used and
             machine-readable format) and to reuse it elsewhere or to ask for Be
-            quasi to transfer it to a third party of your choice.<br></br>
-            <br></br>- Your right to object<br></br>
+            quasi to transfer it to a third party of your choice. <br></br>
+            <br></br> - Your right to object. <br></br>
             <br></br>
             You can ask Be Quasi to stop processing your personal data, and Be
             Quasi will do so, if:<br></br>
@@ -665,7 +664,7 @@ const PrivacyPolicy = () => {
             legitimate interest to process your personal data, except if Be
             Quasi can demonstrate compelling legal grounds for the processing;
             or<br></br>
-            <br></br>- processing your personal data for the purposes of direct
+            <br></br>- Processing your personal data for the purposes of direct
             marketing.<br></br>
             <br></br>- Your rights in relation to automated decision-making and
             profiling <br></br>
@@ -675,15 +674,13 @@ const PrivacyPolicy = () => {
             effect or similarly significantly affects you, unless such profiling
             is necessary for the entering into, or the performance of, a
             contract between you and Be Quasi.<br></br>
-            <br></br>- Your right to withdraw consent <br></br>If Be Quasi
+            <br></br>- Your right to withdraw consent. <br></br><br></br> If Be Quasi
             relies on your consent (or explicit consent) as the legal basis for
             processing your personal data, you have the right to withdraw that
             consent at any time. You can exercise your right of withdrawal by
             contacting Be Quasi using the contact details in the “Get in touch”
             section above or by using any other opt-out mechanism provided, such
-            as an unsubscribe link in an email. <br></br>
-            Your right to lodge a complaint with the supervisory authority
-            <br></br>
+            as an unsubscribe link in an email.
             If you have a concern about any aspect of Be Quasi’s privacy
             practices, including the way Be Quasi has handled your personal
             data, please make contact using the contact details provided in the
@@ -709,7 +706,7 @@ const PrivacyPolicy = () => {
             this Privacy Notice. However, Be Quasi encourages you to review this
             Privacy Notice periodically to be informed of how your personal data
             is used.<br></br>
-            Last updated April 2020 
+            <br></br> Last updated April 2020 
           </p>
         </PrivacyPolicyContainer>
       )}
