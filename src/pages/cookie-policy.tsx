@@ -42,9 +42,11 @@ const CookiePolicy = () => {
           <p className="medium-font">
             This Cookie Policy explains how Be Quasi uses cookies and similar
             technologies to recognize you when you visit the website
-            https://www.bequasi.com/ (‘Site'). It explains what these
+            https://www.bequasi.com/ (Site). It explains what these
             technologies are and why they are used, as well as your rights to
-            control the use of them.<br></br> In some cases, Be Quasi may use
+            control the use of them.
+            </p>
+            In some cases, Be Quasi may use
             cookies to collect personal information or that which becomes
             personal information when combined with other information.
           </p>
