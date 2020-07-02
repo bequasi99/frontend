@@ -82,7 +82,7 @@ const PrivacyPolicy = () => {
             third party websites over which Be Quasi has no control, or you
             purchase goods or services from those third parties).
           </p>
-          <h3 className="medium-font">2. About Be Quasi</h3>
+          <h3 className="medium-font">2. About Be Quasi </h3>
           <p className="medium-font">
             The Site and Services are made available by Be Quasi. Be Quasi is
             the data controller responsible for your personal data.
