@@ -44,8 +44,8 @@ const PrivacyPolicy = () => {
           <p className="medium-font">
             This Privacy Notice applies to the processing of personal data in
             connection with the Be Quasi website at https://www.bequasi.com
-            ('Site'), and all of the goods and services offered, including from
-            the Site or other such locations around the world ('Services'). Be
+            (Site), and all of the goods and services offered, including from
+            the Site or other such locations around the world (Services). Be
             Quasi respects the privacy of every person who visits the Site or
             uses any Services and is committed to ensuring a safe online
             experience for all.
@@ -58,7 +58,7 @@ const PrivacyPolicy = () => {
             Privacy Notice also sets out your rights in respect of the
             processing of your personal data.
             <br /> <br />
-            When Be Quasi talks about 'personal data', this means any
+            When Be Quasi talks about personal data, this means any
             information relating to an identified or identifiable living
             individual. Individuals might be identified by reference to a name,
             an identification number, location data, an online identifier (such
@@ -221,7 +221,7 @@ const PrivacyPolicy = () => {
             <br /><br /> - Customer service and general enquiries
             <br /><br />
             <br /><br />
-            The Site features a “Get in touch to find out more” page which
+            The Site features a Get in touch to find out more page which
             invites you to submit general enquiries about the Site or Services
             by email.<br /><br />
             <br /><br />
