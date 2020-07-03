@@ -46,6 +46,7 @@ const CookiePolicy = () => {
             technologies are and why they are used as well as your rights to
             control the use of them.
             </p>
+          <p className="medium-font">
             In some cases, Be Quasi may use
             cookies to collect personal information or that which becomes
             personal information when combined with other information.
