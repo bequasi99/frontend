@@ -171,8 +171,7 @@ const PrivacyPolicy = () => {
             requested from the Site or where Be Quasi contracts with you to
             provide Services. Be Quasi may collect and process your personal
             data whether you are interacting on your own behalf or on behalf of
-            any organisation you represent.<br /></br />
-            <br /><br />
+            any organisation you represent. <br /></br /><br /><br />
             The personal data Be Quasi processes may include your name and
             contact information (such as email address, postal address and
             telephone number) and your payment information (where applicable).
