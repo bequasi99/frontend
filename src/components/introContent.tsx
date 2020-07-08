@@ -13,11 +13,11 @@ const Scroll = styled.div`
   }
 
   @media ${props => props.theme.breakpoint.lg} {
-    padding: 27px 25px;
+    padding: 29px 25px;
   }
 
   @media ${props => props.theme.breakpoint.xl} {
-    padding: 27px 25px;
+    padding: 29px 25px;
   }
 
   .svg-holder {
