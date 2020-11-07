@@ -37,8 +37,8 @@ const IntroContent = () => {
     <div id="introContent">
       <div className="item">
         <p className="large-font">
-          be quasi is a research project that uses design to help people work
-          creatively and organisations better know how people work.
+          be quasi uses design to help people work
+          creatively and better know how people work.
         </p>
       </div>
       <Scroll className="large-font">
