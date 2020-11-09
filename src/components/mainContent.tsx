@@ -4,7 +4,7 @@ const MainContent = () => {
   return (
     <div id="mainContent" className="item">
       <p className="large-font">
-        be quasi is being developed by Tim Miller as a type of design-led research 
+        be quasi is being developed by Tim Miller as a type of design-led social research 
         called quasi-design.
       </p>
     </div>
