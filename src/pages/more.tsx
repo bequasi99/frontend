@@ -20,6 +20,7 @@ export const query = graphql`
               ... on PrismicEvent {
                 id
                 data {
+                  active
                   end_date(formatString: "YYYY")
                   start_date(formatString: "YYYY")
                   description {
@@ -30,12 +31,13 @@ export const query = graphql`
             }
           }
         }
-        conference {
+        conferences {
           event {
             document {
               ... on PrismicEvent {
                 id
                 data {
+                  active
                   end_date(formatString: "YYYY")
                   start_date(formatString: "YYYY")
                   description {
@@ -52,6 +54,7 @@ export const query = graphql`
               ... on PrismicEvent {
                 id
                 data {
+                  active
                   end_date(formatString: "YYYY")
                   start_date(formatString: "YYYY")
                   description {
@@ -76,6 +79,7 @@ export const query = graphql`
               ... on PrismicEvent {
                 id
                 data {
+                  active
                   end_date(formatString: "YYYY")
                   start_date(formatString: "YYYY")
                   description {
@@ -86,10 +90,109 @@ export const query = graphql`
             }
           }
         }
+        talks {
+          event {
+            document {
+              ... on PrismicEvent {
+                id
+                data {
+                  active
+                  end_date(formatString: "YYYY")
+                  start_date(formatString: "YYYY")
+                  description {
+                    raw
+                  }
+                }
+              }
+            }
+          }
+        }
+        research {
+          event {
+            document {
+              ... on PrismicEvent {
+                id
+                data {
+                  active
+                  start_date(formatString: "YYYY")
+                  end_date(formatString: "YYYY")
+                  description {
+                    raw
+                  }
+                }
+              }
+            }
+          }
+        }
+        other {
+          event {
+            document {
+              ... on PrismicEvent {
+                id
+                data {
+                  active
+                  start_date(formatString: "YYYY")
+                  end_date(formatString: "YYYY")
+                  description {
+                    raw
+                  }
+                }
+              }
+            }
+          }
+        }
+        memberships {
+          event {
+            document {
+              ... on PrismicEvent {
+                id
+                data {
+                  active
+                  end_date(formatString: "YYYY")
+                  start_date(formatString: "YYYY")
+                  description {
+                    raw
+                  }
+                }
+              }
+            }
+          }
+        }
+        experiments {
+          event {
+            document {
+              ... on PrismicEvent {
+                id
+                data {
+                  active
+                  start_date(formatString: "YYYY")
+                  end_date(formatString: "YYYY")
+                  description {
+                    raw
+                  }
+                }
+              }
+            }
+          }
+        }
+        current {
+          document {
+            ... on PrismicEvent {
+              id
+              data {
+                active
+                end_date(formatString: "YYYY")
+                start_date(formatString: "YYYY")
+                description {
+                  raw
+                }
+              }
+            }
+          }
+        }
       }
     }
   }
-
 `
 
 const MoreContainer = styled.div`
@@ -122,16 +225,20 @@ const MoreContainer = styled.div`
 const More = () => {
   const data = useStaticQuery(query)
   const resume = data.prismicResume.data;
-  
+  const pre = ['research', 'education'].map(n => ({ 
+    blockName: n, 
+    events: resume[n].map(e => e.event.document.data)
+  }));
+  const post = ['experiments', 'teaching', 'conferences', 'talks', 'awards', 'memberships', 'other'].map(n => ({ 
+    blockName: n, 
+    events: resume[n].map(e => e.event.document.data)
+  }));
   //individual components
   const profile_photo = resume.profile_photo.url;
   const bio = resume.biography.raw;
-  const education = resume.education.map(e => e.event.document.data);
-  const conferences = resume.conference.map(e => e.event.document.data);
-  const awards = resume.awards.map(e => e.event.document.data);
-  const teaching = resume.teaching.map(e => e.event.document.data);
   const publications = resume.publications.map(e => e.publication.raw);
-
+  console.log(publications);
+  const current = resume.current.document.data;
   return (
     <ModalRoutingContext.Consumer>
       {({ modal, closeTo }) => (<Layout>
@@ -142,11 +249,10 @@ const More = () => {
               <Resume 
                 photo={profile_photo}
                 bio={bio}
-                education={education}
-                conferences={conferences}
-                awards={awards}
-                teaching={teaching}
+                current={current}
+                pre={pre}
                 publications={publications}
+                post={post}
               />
             </MoreContainer>
           </Layout>)}

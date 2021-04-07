@@ -1,97 +1,202 @@
 {
-    "Main" : {
-      "profile_photo" : {
-        "type" : "Image",
-        "config" : {
-          "constraint" : { },
-          "thumbnails" : [ ],
-          "label" : "Profile Photo"
+    "Main": {
+      "profile_photo": {
+        "type": "Image",
+        "config": {
+          "constraint": {},
+          "thumbnails": [],
+          "label": "Profile Photo"
         }
       },
-      "biography" : {
-        "type" : "StructuredText",
-        "config" : {
-          "multi" : "paragraph, strong, em, hyperlink, image, embed, list-item, o-list-item",
-          "label" : "Biography"
+      "biography": {
+        "type": "StructuredText",
+        "config": {
+          "multi": "paragraph, strong, em, hyperlink, image, embed, list-item, o-list-item",
+          "label": "Biography"
         }
       },
-      "education" : {
-        "type" : "Group",
-        "config" : {
-          "fields" : {
-            "event" : {
-              "type" : "Link",
-              "config" : {
-                "select" : "document",
-                "customtypes" : [ "event" ],
-                "label" : "Event"
+      "current": {
+        "type": "Link",
+        "config": {
+          "select": "document",
+          "customtypes": [
+            "event"
+          ],
+          "label": "Current"
+        }
+      },
+      "research": {
+        "type": "Group",
+        "config": {
+          "fields": {
+            "event": {
+              "type": "Link",
+              "config": {
+                "select": "document",
+                "label": "Event"
               }
             }
           },
-          "label" : "Education"
+          "label": "Research"
         }
       },
-      "publications" : {
-        "type" : "Group",
-        "config" : {
-          "fields" : {
-            "publication" : {
-              "type" : "StructuredText",
-              "config" : {
-                "single" : "paragraph, preformatted, heading1, heading2, heading3, heading4, heading5, heading6, strong, em, hyperlink",
-                "label" : "publication"
+      "education": {
+        "type": "Group",
+        "config": {
+          "fields": {
+            "event": {
+              "type": "Link",
+              "config": {
+                "select": "document",
+                "customtypes": [
+                  "event"
+                ],
+                "label": "Event"
               }
             }
           },
-          "label" : "Publications"
+          "label": "Education"
         }
       },
-      "teaching" : {
-        "type" : "Group",
-        "config" : {
-          "fields" : {
-            "event" : {
-              "type" : "Link",
-              "config" : {
-                "select" : "document",
-                "customtypes" : [ "event" ],
-                "label" : "Event"
+      "publications": {
+        "type": "Group",
+        "config": {
+          "fields": {
+            "publication": {
+              "type": "StructuredText",
+              "config": {
+                "single": "paragraph, preformatted, heading1, heading2, heading3, heading4, heading5, heading6, strong, em, hyperlink",
+                "label": "publication"
               }
             }
           },
-          "label" : "Teaching"
+          "label": "Publications"
         }
       },
-      "conference" : {
-        "type" : "Group",
-        "config" : {
-          "fields" : {
-            "event" : {
-              "type" : "Link",
-              "config" : {
-                "select" : "document",
-                "customtypes" : [ "event" ],
-                "label" : "Event"
+      "experiments": {
+        "type": "Group",
+        "config": {
+          "fields": {
+            "event": {
+              "type": "Link",
+              "config": {
+                "select": "document",
+                "customtypes": [
+                  "event"
+                ],
+                "label": "Event"
               }
             }
           },
-          "label" : "Conference"
+          "label": "Experiments"
         }
       },
-      "awards" : {
-        "type" : "Group",
-        "config" : {
-          "fields" : {
-            "event" : {
-              "type" : "Link",
-              "config" : {
-                "select" : "document",
-                "customtypes" : [ "event" ],
-                "label" : "Event"
+      "teaching": {
+        "type": "Group",
+        "config": {
+          "fields": {
+            "event": {
+              "type": "Link",
+              "config": {
+                "select": "document",
+                "customtypes": [
+                  "event"
+                ],
+                "label": "Event"
               }
             }
           },
-          "label" : "Awards"
+          "label": "Teaching"
+        }
+      },
+      "conferences": {
+        "type": "Group",
+        "config": {
+          "fields": {
+            "event": {
+              "type": "Link",
+              "config": {
+                "select": "document",
+                "customtypes": [
+                  "event"
+                ],
+                "label": "Event"
+              }
+            }
+          },
+          "label": "Conferences"
+        }
+      },
+      "talks": {
+        "type": "Group",
+        "config": {
+          "fields": {
+            "event": {
+              "type": "Link",
+              "config": {
+                "select": "document",
+                "customtypes": [
+                  "event"
+                ],
+                "label": "Event"
+              }
+            }
+          },
+          "label": "Talks"
+        }
+      },
+      "awards": {
+        "type": "Group",
+        "config": {
+          "fields": {
+            "event": {
+              "type": "Link",
+              "config": {
+                "select": "document",
+                "customtypes": [
+                  "event"
+                ],
+                "label": "Event"
+              }
+            }
+          },
+          "label": "Awards"
+        }
+      },
+      "memberships": {
+        "type": "Group",
+        "config": {
+          "fields": {
+            "event": {
+              "type": "Link",
+              "config": {
+                "select": "document",
+                "customtypes": [
+                  "event"
+                ],
+                "label": "Event"
+              }
+            }
+          },
+          "label": "Memberships"
+        }
+      },
+      "other": {
+        "type": "Group",
+        "config": {
+          "fields": {
+            "event": {
+              "type": "Link",
+              "config": {
+                "select": "document",
+                "customtypes": [
+                  "event"
+                ],
+                "label": "Event"
+              }
+            }
+          },
+          "label": "Other"
         }
       }
     }

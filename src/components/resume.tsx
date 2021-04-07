@@ -41,6 +41,7 @@ const ResumeContainer = styled.div`
   }
   h2.resume {
     margin-bottom: 18px;
+    text-transform: capitalize;
     @media ${props => props.theme.breakpoint.lg} {
       margin-bottom: 8px;
     }
@@ -72,37 +73,36 @@ const ResumeContainer = styled.div`
 const Resume = ({
   photo, 
   bio, 
-  education, 
-  conferences, 
-  awards, 
-  teaching, 
-  publications
+  pre, 
+  current,
+  publications,
+  post
 }) => (<ResumeContainer>
   <div className="resumepage">
     <img src={photo} alt="profile" />
     <div className="block">
       {RichText.render(bio)}
     </div>
-    <div className="block">
-      <h2 className="resume">Education</h2>
-      {education.map((e, i) => Event({...e, key: i}))}
+    <div>
+      <h2 className="resume">Current</h2>
+      <Event {...current} />
     </div>
+    {pre.map(({blockName, events}, i) => (
+      <div className="block" key={i}>
+        <h2 className="resume">{blockName}</h2>
+        {events.map((e, i) => Event({...e, key: i}))}
+      </div>
+    ))}
     <div className="block">
-      <h2 className="resume">Publication</h2>
-      {publications.map((e, i) => RichText.render({...e, key: i}))}
+      <h2 className="resume">Publications</h2>
+      {publications.map((e, i) => (<div key={i}>{RichText.render(e)}</div>))}
     </div>
-    <div className="block">
-      <h2 className="resume">Teaching</h2>
-      {teaching.map((e, i) => Event({...e, key: i}))}
-    </div>
-    <div className="block">
-      <h2 className="resume">Conference</h2>
-      {conferences.map((e, i) => Event({...e, key: i}))}
-    </div>
-    <div className="block">
-      <h2 className="resume">Awards</h2>
-      {awards.map((e, i) => Event({...e, key: i}))}
-    </div>
+    {post.map(({blockName, events}, i) => (
+      <div className="block" key={i}>
+        <h2 className="resume">{blockName}</h2>
+        {events.map((e, i) => Event({...e, key: i}))}
+      </div>
+    ))}
   </div>
 </ResumeContainer>)
 

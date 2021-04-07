@@ -45,8 +45,8 @@ const EventContainer = styled.div`
   }
 `
 
-const Event = ({start_date, end_date, description, key}) => (<EventContainer key={key}>
-  <p className="date">{start_date}{start_date === end_date ? '' : `-${end_date.slice(2)}`}</p>
+const Event = ({start_date, end_date, description, active, key}) => (<EventContainer key={key}>
+  <p className="date">{start_date}{start_date !== end_date || active ? '-' : ''}{start_date === end_date ? '' : `${end_date.slice(2)}`}</p>
   <div className="description">
     {RichText.render(description.raw)}
   </div>
