@@ -122,7 +122,7 @@ const MoreContainer = styled.div`
 const More = () => {
   const data = useStaticQuery(query)
   const resume = data.prismicResume.data;
-  console.log(resume);
+  
   //individual components
   const profile_photo = resume.profile_photo.url;
   const bio = resume.biography.raw;
