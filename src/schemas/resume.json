@@ -1,0 +1,98 @@
+{
+    "Main" : {
+      "profile_photo" : {
+        "type" : "Image",
+        "config" : {
+          "constraint" : { },
+          "thumbnails" : [ ],
+          "label" : "Profile Photo"
+        }
+      },
+      "biography" : {
+        "type" : "StructuredText",
+        "config" : {
+          "multi" : "paragraph, strong, em, hyperlink, image, embed, list-item, o-list-item",
+          "label" : "Biography"
+        }
+      },
+      "education" : {
+        "type" : "Group",
+        "config" : {
+          "fields" : {
+            "event" : {
+              "type" : "Link",
+              "config" : {
+                "select" : "document",
+                "customtypes" : [ "event" ],
+                "label" : "Event"
+              }
+            }
+          },
+          "label" : "Education"
+        }
+      },
+      "publications" : {
+        "type" : "Group",
+        "config" : {
+          "fields" : {
+            "publication" : {
+              "type" : "StructuredText",
+              "config" : {
+                "single" : "paragraph, preformatted, heading1, heading2, heading3, heading4, heading5, heading6, strong, em, hyperlink",
+                "label" : "publication"
+              }
+            }
+          },
+          "label" : "Publications"
+        }
+      },
+      "teaching" : {
+        "type" : "Group",
+        "config" : {
+          "fields" : {
+            "event" : {
+              "type" : "Link",
+              "config" : {
+                "select" : "document",
+                "customtypes" : [ "event" ],
+                "label" : "Event"
+              }
+            }
+          },
+          "label" : "Teaching"
+        }
+      },
+      "conference" : {
+        "type" : "Group",
+        "config" : {
+          "fields" : {
+            "event" : {
+              "type" : "Link",
+              "config" : {
+                "select" : "document",
+                "customtypes" : [ "event" ],
+                "label" : "Event"
+              }
+            }
+          },
+          "label" : "Conference"
+        }
+      },
+      "awards" : {
+        "type" : "Group",
+        "config" : {
+          "fields" : {
+            "event" : {
+              "type" : "Link",
+              "config" : {
+                "select" : "document",
+                "customtypes" : [ "event" ],
+                "label" : "Event"
+              }
+            }
+          },
+          "label" : "Awards"
+        }
+      }
+    }
+  }
