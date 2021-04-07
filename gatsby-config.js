@@ -29,6 +29,7 @@ module.exports = {
         schemas: {
           item: require("./src/schemas/item.json"),
           order: require("./src/schemas/order.json"),
+          legal: require("./src/schemas/legal.json")
         },
       },
     },

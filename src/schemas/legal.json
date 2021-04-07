@@ -1,0 +1,18 @@
+{
+  "Main" : {
+    "type" : {
+      "type" : "Select",
+      "config" : {
+        "options" : [ "Cookies", "Privacy" ],
+        "label" : "Type"
+      }
+    },
+    "body" : {
+      "type" : "StructuredText",
+      "config" : {
+        "multi" : "paragraph, strong, em, hyperlink, list-item",
+        "label" : "Body"
+      }
+    }
+  }
+}
