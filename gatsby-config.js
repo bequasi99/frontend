@@ -29,6 +29,9 @@ module.exports = {
         schemas: {
           item: require("./src/schemas/item.json"),
           order: require("./src/schemas/order.json"),
+          legal: require("./src/schemas/legal.json"),
+          event: require("./src/schemas/event.json"),
+          resume: require("./src/schemas/resume.json")
         },
       },
     },

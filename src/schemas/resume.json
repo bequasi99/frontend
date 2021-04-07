@@ -1,0 +1,203 @@
+{
+    "Main": {
+      "profile_photo": {
+        "type": "Image",
+        "config": {
+          "constraint": {},
+          "thumbnails": [],
+          "label": "Profile Photo"
+        }
+      },
+      "biography": {
+        "type": "StructuredText",
+        "config": {
+          "multi": "paragraph, strong, em, hyperlink, image, embed, list-item, o-list-item",
+          "label": "Biography"
+        }
+      },
+      "current": {
+        "type": "Link",
+        "config": {
+          "select": "document",
+          "customtypes": [
+            "event"
+          ],
+          "label": "Current"
+        }
+      },
+      "research": {
+        "type": "Group",
+        "config": {
+          "fields": {
+            "event": {
+              "type": "Link",
+              "config": {
+                "select": "document",
+                "label": "Event"
+              }
+            }
+          },
+          "label": "Research"
+        }
+      },
+      "education": {
+        "type": "Group",
+        "config": {
+          "fields": {
+            "event": {
+              "type": "Link",
+              "config": {
+                "select": "document",
+                "customtypes": [
+                  "event"
+                ],
+                "label": "Event"
+              }
+            }
+          },
+          "label": "Education"
+        }
+      },
+      "publications": {
+        "type": "Group",
+        "config": {
+          "fields": {
+            "publication": {
+              "type": "StructuredText",
+              "config": {
+                "single": "paragraph, preformatted, heading1, heading2, heading3, heading4, heading5, heading6, strong, em, hyperlink",
+                "label": "publication"
+              }
+            }
+          },
+          "label": "Publications"
+        }
+      },
+      "experiments": {
+        "type": "Group",
+        "config": {
+          "fields": {
+            "event": {
+              "type": "Link",
+              "config": {
+                "select": "document",
+                "customtypes": [
+                  "event"
+                ],
+                "label": "Event"
+              }
+            }
+          },
+          "label": "Experiments"
+        }
+      },
+      "teaching": {
+        "type": "Group",
+        "config": {
+          "fields": {
+            "event": {
+              "type": "Link",
+              "config": {
+                "select": "document",
+                "customtypes": [
+                  "event"
+                ],
+                "label": "Event"
+              }
+            }
+          },
+          "label": "Teaching"
+        }
+      },
+      "conferences": {
+        "type": "Group",
+        "config": {
+          "fields": {
+            "event": {
+              "type": "Link",
+              "config": {
+                "select": "document",
+                "customtypes": [
+                  "event"
+                ],
+                "label": "Event"
+              }
+            }
+          },
+          "label": "Conferences"
+        }
+      },
+      "talks": {
+        "type": "Group",
+        "config": {
+          "fields": {
+            "event": {
+              "type": "Link",
+              "config": {
+                "select": "document",
+                "customtypes": [
+                  "event"
+                ],
+                "label": "Event"
+              }
+            }
+          },
+          "label": "Talks"
+        }
+      },
+      "awards": {
+        "type": "Group",
+        "config": {
+          "fields": {
+            "event": {
+              "type": "Link",
+              "config": {
+                "select": "document",
+                "customtypes": [
+                  "event"
+                ],
+                "label": "Event"
+              }
+            }
+          },
+          "label": "Awards"
+        }
+      },
+      "memberships": {
+        "type": "Group",
+        "config": {
+          "fields": {
+            "event": {
+              "type": "Link",
+              "config": {
+                "select": "document",
+                "customtypes": [
+                  "event"
+                ],
+                "label": "Event"
+              }
+            }
+          },
+          "label": "Memberships"
+        }
+      },
+      "other": {
+        "type": "Group",
+        "config": {
+          "fields": {
+            "event": {
+              "type": "Link",
+              "config": {
+                "select": "document",
+                "customtypes": [
+                  "event"
+                ],
+                "label": "Event"
+              }
+            }
+          },
+          "label": "Other"
+        }
+      }
+    }
+  }
