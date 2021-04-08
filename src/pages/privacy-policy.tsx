@@ -22,7 +22,18 @@ export const query = graphql`
 
 const PrivacyPolicyContainer = styled.div`
   position: relative;
-  padding: 5% 15% 5% 15%;
+  padding: 82px 18px 156px 18px;
+  @media ${props => props.theme.breakpoint.lg} {
+    padding: 82px 216px 227px 20px;
+  }
+  
+  @media ${props => props.theme.breakpoint.xl} {
+    padding: 82px 410px 233px 20px;
+  }
+  
+  @media ${props => props.theme.breakpoint.xxl} {
+    padding: 82px 575px 268px 35px;
+  }
   background-color: #fff;
 
   .close {
@@ -61,12 +72,14 @@ const PrivacyPolicy = () => {
             </Layout>
           )
         } else return ( 
-          <PrivacyPolicyContainer className="medium-font">
-            <Link to={closeTo} className="close large-font">
-              Close
-            </Link>
-            {RichText.render(body)}
-          </PrivacyPolicyContainer>
+          <Layout>
+            <PrivacyPolicyContainer className="medium-font">
+              <Link to={closeTo} className="close large-font">
+                Close
+              </Link>
+              {RichText.render(body)}
+            </PrivacyPolicyContainer>
+          </Layout>
         )
       }}
     </ModalRoutingContext.Consumer>
