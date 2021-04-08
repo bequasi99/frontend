@@ -42,12 +42,20 @@ const PrivacyPolicyContainer = styled.div`
     position: absolute;
     top: 0;
     right: 0;
+    margin-top: 12px;
     margin-right: 18px;
+    
     @media ${props => props.theme.breakpoint.lg} {
+      position: fixed;
+      margin-top: 21px;
       margin-right: 15px;
+      :hover {
+        color: #2a2937;
+      }
     }
     
     @media ${props => props.theme.breakpoint.xl} {
+      margin-top: 16px;
       margin-right: 25px;
     }
     
