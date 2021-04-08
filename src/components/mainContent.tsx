@@ -2,16 +2,23 @@ import React from "react"
 import { Link } from "gatsby"
 import styled from "styled-components"
 
-const LinkContainer = styled.span`
+const LinkContainer = styled.div`
+  display: inline-block;
+  white-space: nowrap;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+  transform: translateY(0);
+  :hover {
+    transform: translateY(-5px);
+  }
   a {
-    color: ${props => props.theme.colors.yellow};
     cursor: pointer;
     line-height: 128%;
-    transition: transform 0.5s ease, opacity 0.5s ease;
-    transform: translateY(0);
+    color: ${props => props.theme.colors.yellow};
     text-decoration: none;
+    :hover {
+      color: #ee7ff0;
+    }
   }
-
 `
 
 const MainContent = () => {

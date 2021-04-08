@@ -6,6 +6,7 @@ const EventContainer = styled.div`
 .date {
     vertical-align: top;
     margin-bottom: 6px;
+    text-align: justify;
 
     @media ${props => props.theme.breakpoint.lg} {
       display: inline-block;
@@ -41,6 +42,9 @@ const EventContainer = styled.div`
     
     @media ${props => props.theme.breakpoint.xxl} {
       width: 690px;
+    }
+    p:not(:last-child) {
+      margin-bottom: 6px;
     }
   }
 `

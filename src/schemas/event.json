@@ -1,32 +1,32 @@
 {
-    "Main": {
-      "start_date": {
-        "type": "Date",
-        "config": {
-          "label": "Start Date"
-        }
-      },
-      "active": {
-        "type": "Boolean",
-        "config": {
-          "placeholder_false": "Yes, I'm currently doing this",
-          "placeholder_true": "No, this has finished",
-          "default_value": false,
-          "label": "Active"
-        }
-      },
-      "end_date": {
-        "type": "Date",
-        "config": {
-          "label": "End Date"
-        }
-      },
-      "description": {
-        "type": "StructuredText",
-        "config": {
-          "single": "paragraph, heading1, heading2, heading3, heading4, heading5, heading6, strong, em, hyperlink",
-          "label": "Description"
-        }
+  "Main": {
+    "start_date": {
+      "type": "Date",
+      "config": {
+        "label": "Start Date"
+      }
+    },
+    "active": {
+      "type": "Boolean",
+      "config": {
+        "placeholder_false": "No, I've finished this",
+        "placeholder_true": "Yes, I'm currently doing this",
+        "default_value": false,
+        "label": "Active"
+      }
+    },
+    "end_date": {
+      "type": "Date",
+      "config": {
+        "label": "End Date"
+      }
+    },
+    "description": {
+      "type": "StructuredText",
+      "config": {
+        "multi": "paragraph, heading1, heading2, heading3, heading4, heading5, heading6, strong, em, hyperlink",
+        "label": "Description"
       }
     }
   }
+}
