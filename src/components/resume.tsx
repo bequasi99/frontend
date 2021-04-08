@@ -5,19 +5,6 @@ import Event from './event'
 
 const ResumeContainer = styled.div`
   width: 100%;
-  .resumepage {
-    @media ${props => props.theme.breakpoint.lg} {
-      width: 514px;
-    }
-  
-    @media ${props => props.theme.breakpoint.xl} {
-      width: 590px;
-    }
-  
-    @media ${props => props.theme.breakpoint.xxl} {
-      width: 890px;
-    }
-  }
   img {
     width: 150px;
     height: 150px;

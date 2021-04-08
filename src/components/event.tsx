@@ -3,45 +3,29 @@ import styled from "styled-components"
 import { RichText } from "prismic-reactjs"
 
 const EventContainer = styled.div`
-.date {
+  padding: 0px;
+  @media ${props => props.theme.breakpoint.lg} {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+  }
+  .date {
     vertical-align: top;
     margin-bottom: 6px;
     text-align: justify;
-
     @media ${props => props.theme.breakpoint.lg} {
+      position: static;
+      left: 0%;
       display: inline-block;
-      width: 70px;
-      margin-right: 20px;
-    }
-
-    @media ${props => props.theme.breakpoint.xl} {
-      display: inline-block;
-      width: 90px;
-      margin-right: 20px;
-    }
-    
-    @media ${props => props.theme.breakpoint.xxl} {
-      display: inline-block;
-      width: 150px;
-      margin-right: 40px;
+      width: 21.59%;
     }
   }
   .description {
     vertical-align: top;
-    width: 100%;
-    
     @media ${props => props.theme.breakpoint.lg} {
+      position: static;
+      width: 82.95%;
       display: inline-block;
-      width: 424px;
-    }
-    
-    @media ${props => props.theme.breakpoint.xl} {
-      display: inline-block;
-      width: 480px;
-    }
-    
-    @media ${props => props.theme.breakpoint.xxl} {
-      width: 690px;
     }
     p:not(:last-child) {
       margin-bottom: 6px;

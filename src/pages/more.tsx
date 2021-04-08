@@ -199,15 +199,15 @@ const MoreContainer = styled.div`
   position: relative;
   padding: 82px 18px 156px 18px;
   @media ${props => props.theme.breakpoint.lg} {
-    padding: 82px 216px 227px 20px;
+    padding: 82px 216px 227px 15px;
   }
   
   @media ${props => props.theme.breakpoint.xl} {
-    padding: 82px 410px 233px 20px;
+    padding: 82px 410px 233px 25px;
   }
   
   @media ${props => props.theme.breakpoint.xxl} {
-    padding: 82px 575px 268px 35px;
+    padding: 82px 575px 268px 25px;
   }
 
   background-color: #fff;
@@ -218,12 +218,21 @@ const MoreContainer = styled.div`
     position: absolute;
     top: 0;
     right: 0;
-    padding-right: 15px;
+    margin-right: 18px;
     @media ${props => props.theme.breakpoint.lg} {
       position: fixed;
+      margin-right: 15px;
       :hover {
         color: #2a2937;
       }
+    }
+    
+    @media ${props => props.theme.breakpoint.xl} {
+      margin-right: 25px;
+    }
+    
+    @media ${props => props.theme.breakpoint.xxl} {
+      margin-right: 25px;
     }
   }
 
