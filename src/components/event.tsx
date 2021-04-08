@@ -28,7 +28,7 @@ const EventContainer = styled.div`
       display: inline-block;
     }
     p:not(:last-child) {
-      margin-bottom: 6px;
+      margin: 0;
     }
   }
 `
