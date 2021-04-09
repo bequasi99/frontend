@@ -69,8 +69,20 @@ export const query = graphql`
           url
         }
         publications {
-          publication {
-            raw
+          event {
+            document {
+              ... on PrismicEvent {
+                id
+                data {
+                  active
+                  end_date(formatString: "YYYY")
+                  start_date(formatString: "YYYY")
+                  description {
+                    raw
+                  }
+                }
+              }
+            }
           }
         }
         teaching {
@@ -247,23 +259,63 @@ const MoreContainer = styled.div`
   }
 `
 
+const generateDate = (data) => `${data.start_date}${data.start_date !== data.end_date || data.active ? '-' : ''}${data.start_date === data.end_date ? '' : data.end_date.slice(2)}`;
+
+const groupEventsByYear = (keys, data) => {
+  return keys.map(n => ({ 
+    blockName: n, 
+    events: data[n]
+      .filter(e => e && e.event && e.event.document && e.event.document.data)
+      .map(e => e.event.document.data).reduce((curr, event) => {
+        //generate key of event
+        const eventKey = generateDate(event);
+
+        //if unique add to ordering
+        curr.order.includes(eventKey) ? null : curr.order = [...curr.order, eventKey];
+        //spread event in list
+        if (curr[eventKey]) {
+          curr[eventKey] = {
+            ...curr[eventKey],
+            descriptions: [...curr[eventKey].descriptions, event.description.raw]
+          }
+        } else {
+          curr[eventKey] = {
+            date: eventKey,
+            descriptions: [event.description.raw]
+          }
+        }
+        return curr;
+      }, {
+        order: []
+      })
+    }));
+}
+
 const More = () => {
   const data = useStaticQuery(query)
   const resume = data.prismicResume.data;
-  const pre = ['research', 'education'].map(n => ({ 
-    blockName: n, 
-    events: resume[n].map(e => e.event.document.data)
-  }));
-  const post = ['experiments', 'teaching', 'conferences', 'talks', 'awards', 'memberships', 'other'].map(n => ({ 
-    blockName: n, 
-    events: resume[n].map(e => e.event.document.data)
-  }));
+  
+  const current = {
+    date: generateDate(resume.current.document.data),
+    descriptions: [resume.current.document.data.description.raw]
+  };
+  
+  const listings = groupEventsByYear([
+    'research', 
+    'education',
+    'publications',
+    'teaching', 
+    'conferences', 
+    'talks', 
+    'awards', 
+    'memberships', 
+    'other'
+  ], resume);
+  
   //individual components
   const profile_photo = resume.profile_photo.url;
   const bio = resume.biography.raw;
-  const publications = resume.publications.map(e => e.publication.raw);
-  console.log(publications);
-  const current = resume.current.document.data;
+
   return (
     <ModalRoutingContext.Consumer>
       {({ modal, closeTo }) => (<Layout>
@@ -275,9 +327,7 @@ const More = () => {
                 photo={profile_photo}
                 bio={bio}
                 current={current}
-                pre={pre}
-                publications={publications}
-                post={post}
+                listings={listings}
               />
             </MoreContainer>
           </Layout>)}

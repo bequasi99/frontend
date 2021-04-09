@@ -30,14 +30,29 @@ const EventContainer = styled.div`
     p {
       margin: 0;
     }
+    .pushdown {
+      margin-bottom: 8px;
+      @media ${props => props.theme.breakpoint.xl} {
+        margin-bottom: 10px;
+      }
+      @media ${props => props.theme.breakpoint.xxl} {
+        margin-bottom: 20px;
+      }
+    }
   }
 `
 
-const Event = ({start_date, end_date, description, active, key}) => (<EventContainer key={key}>
-  <p className="date">{start_date}{start_date !== end_date || active ? '-' : ''}{start_date === end_date ? '' : `${end_date.slice(2)}`}</p>
-  <div className="description">
-    {RichText.render(description.raw)}
-  </div>
-</EventContainer>)
+const Event = ({date, descriptions, key, last}) => {
+  return (<EventContainer key={key}>
+    <p className="date">{date}</p>
+    <div className="description">
+      {descriptions.map((description, i) => (
+        <div key={i} className={(i !== (descriptions.length - 1)) || !last ? "pushdown" : ""}>
+          {RichText.render(description)}
+        </div>
+      ))}
+    </div>
+  </EventContainer>)
+}
 
 export default Event
