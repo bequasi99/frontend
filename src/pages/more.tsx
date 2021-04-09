@@ -203,23 +203,24 @@ export const query = graphql`
           }
         }
       }
+      last_publication_date(formatString: "MMMM YYYY")
     }
   }
 `
 
 const MoreContainer = styled.div`
   position: relative;
-  padding: 82px 18px 156px 18px;
+  padding: 82px 18px 20px 18px;
   @media ${props => props.theme.breakpoint.lg} {
-    padding: 82px 216px 227px 25px;
+    padding: 82px 216px 50px 25px;
   }
   
   @media ${props => props.theme.breakpoint.xl} {
-    padding: 82px 410px 233px 25px;
+    padding: 82px 410px 75px 25px;
   }
   
   @media ${props => props.theme.breakpoint.xxl} {
-    padding: 82px 575px 268px 25px;
+    padding: 82px 575px 100px 25px;
   }
 
   background-color: #fff;
@@ -304,7 +305,7 @@ const groupEventsByYear = (keys, data) => {
 const More = () => {
   const data = useStaticQuery(query)
   const resume = data.prismicResume.data;
-  
+  console.log(data);
   const current = {
     date: generateDate(resume.current.document.data),
     descriptions: [resume.current.document.data.description.raw]
@@ -340,6 +341,7 @@ const More = () => {
                 current={current}
                 listings={listings}
               />
+              <p>Last Updated {data.prismicResume.last_publication_date}</p>
             </MoreContainer>
           </Layout>)}
     </ModalRoutingContext.Consumer>
