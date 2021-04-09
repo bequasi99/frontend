@@ -27,7 +27,7 @@ const EventContainer = styled.div`
       width: 82.95%;
       display: inline-block;
     }
-    p:not(:last-child) {
+    p {
       margin: 0;
     }
   }
