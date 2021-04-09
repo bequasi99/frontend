@@ -70,7 +70,7 @@ const Resume = ({
     <div className="block">
       {RichText.render(bio)}
     </div>
-    <div>
+    <div className="block">
       <h2 className="resume">Current</h2>
       <Event {...current} />
     </div>
