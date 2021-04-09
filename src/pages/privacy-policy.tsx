@@ -23,6 +23,7 @@ export const query = graphql`
 const PrivacyPolicyContainer = styled.div`
   position: relative;
   padding: 82px 18px 156px 18px;
+  width: 100%;
   @media ${props => props.theme.breakpoint.lg} {
     padding: 82px 216px 227px 25px;
   }
@@ -66,13 +67,22 @@ const PrivacyPolicyContainer = styled.div`
 
   h2,
   h3,
-  p {
+  p, ul {
     margin-bottom: 30px;
   }
 
   ul, li {
     list-style: initial;
     padding: revert;
+  }
+  li {
+    margin-bottom: 8px;
+    @media ${props => props.theme.breakpoint.xl} {
+      margin-bottom: 10px;
+    }
+    @media ${props => props.theme.breakpoint.xxl} {
+      margin-bottom: 20px;
+    }
   }
   em {
     font-style: revert;
