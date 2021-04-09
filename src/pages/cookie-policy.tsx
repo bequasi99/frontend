@@ -90,6 +90,10 @@ const CookiePolicyContainer = styled.div`
   strong {
     font-weight: 700;
   }
+  a {
+    text-decoration: underline;
+    cursor: pointer;
+  }
 `
 
 const CookiePolicy = () => {

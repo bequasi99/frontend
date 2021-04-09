@@ -268,6 +268,10 @@ const MoreContainer = styled.div`
   strong {
     font-weight: 700;
   }
+  a {
+    text-decoration: underline;
+    cursor: pointer;
+  }
 `
 
 const generateDate = (data) => `${data.start_date}${data.start_date !== data.end_date || data.active ? '-' : ''}${data.start_date === data.end_date ? '' : data.end_date.slice(2)}`;
