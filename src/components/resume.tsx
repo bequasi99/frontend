@@ -59,11 +59,9 @@ const ResumeContainer = styled.div`
 
 const Resume = ({
   photo, 
-  bio, 
-  pre, 
+  bio,
   current,
-  publications,
-  post
+  listings
 }) => (<ResumeContainer>
   <div className="resumepage">
     <img src={photo} alt="profile" />
@@ -74,20 +72,14 @@ const Resume = ({
       <h2 className="resume">Current</h2>
       <Event {...current} />
     </div>
-    {pre.map(({blockName, events}, i) => (
+    {listings.map(({blockName, events}, i) => (
       <div className="block" key={i}>
         <h2 className="resume">{blockName}</h2>
-        {events.map((e, i) => Event({...e, key: i}))}
-      </div>
-    ))}
-    <div className="block">
-      <h2 className="resume">Publications</h2>
-      {publications.map((e, i) => (<div key={i}>{RichText.render(e)}</div>))}
-    </div>
-    {post.map(({blockName, events}, i) => (
-      <div className="block" key={i}>
-        <h2 className="resume">{blockName}</h2>
-        {events.map((e, i) => Event({...e, key: i}))}
+        {events.order.map((y, i) => Event({
+          ...events[y], 
+          key: i, 
+          last: i === (events.order.length - 1)
+        }))}
       </div>
     ))}
   </div>
