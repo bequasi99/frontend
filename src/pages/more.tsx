@@ -257,6 +257,16 @@ const MoreContainer = styled.div`
   p {
     margin-bottom: 30px;
   }
+  ul, li {
+    list-style: initial;
+    padding: revert;
+  }
+  em {
+    font-style: revert;
+  }
+  strong {
+    font-weight: 700;
+  }
 `
 
 const generateDate = (data) => `${data.start_date}${data.start_date !== data.end_date || data.active ? '-' : ''}${data.start_date === data.end_date ? '' : data.end_date.slice(2)}`;
@@ -304,6 +314,7 @@ const More = () => {
     'research', 
     'education',
     'publications',
+    'experiments',
     'teaching', 
     'conferences', 
     'talks', 

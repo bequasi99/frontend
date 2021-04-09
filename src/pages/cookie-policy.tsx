@@ -69,6 +69,16 @@ const CookiePolicyContainer = styled.div`
   p {
     margin-bottom: 30px;
   }
+  ul, li {
+    list-style: initial;
+    padding: revert;
+  }
+  em {
+    font-style: revert;
+  }
+  strong {
+    font-weight: 700;
+  }
 `
 
 const CookiePolicy = () => {
