@@ -255,9 +255,10 @@ const MoreContainer = styled.div`
 
   h2,
   h3,
-  p {
+  p, ul, li {
     margin-bottom: 30px;
   }
+
   ul, li {
     list-style: initial;
     padding: revert;

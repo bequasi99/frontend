@@ -68,22 +68,13 @@ const PrivacyPolicyContainer = styled.div`
 
   h2,
   h3,
-  p, ul {
+  p, ul, li {
     margin-bottom: 30px;
   }
 
   ul, li {
     list-style: initial;
     padding: revert;
-  }
-  li {
-    margin-bottom: 8px;
-    @media ${props => props.theme.breakpoint.xl} {
-      margin-bottom: 10px;
-    }
-    @media ${props => props.theme.breakpoint.xxl} {
-      margin-bottom: 20px;
-    }
   }
   em {
     font-style: revert;
