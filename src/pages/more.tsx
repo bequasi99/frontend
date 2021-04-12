@@ -14,189 +14,32 @@ export const query = graphql`
         biography {
           raw
         }
-        awards {
-          event {
-            document {
-              ... on PrismicEvent {
-                id
-                data {
-                  active
-                  end_date(formatString: "YYYY")
-                  start_date(formatString: "YYYY")
-                  description {
-                    raw
-                  }
-                }
-              }
-            }
-          }
-        }
-        conferences {
-          event {
-            document {
-              ... on PrismicEvent {
-                id
-                data {
-                  active
-                  end_date(formatString: "YYYY")
-                  start_date(formatString: "YYYY")
-                  description {
-                    raw
-                  }
-                }
-              }
-            }
-          }
-        }
-        education {
-          event {
-            document {
-              ... on PrismicEvent {
-                id
-                data {
-                  active
-                  end_date(formatString: "YYYY")
-                  start_date(formatString: "YYYY")
-                  description {
-                    raw
-                  }
-                }
-              }
-            }
-          }
-        }
         profile_photo {
           url
         }
-        publications {
-          event {
+        sections {
+          section {
             document {
-              ... on PrismicEvent {
+              ... on PrismicSection {
                 id
                 data {
-                  active
-                  end_date(formatString: "YYYY")
-                  start_date(formatString: "YYYY")
-                  description {
-                    raw
+                  title
+                  events {
+                    event {
+                      document {
+                        ... on PrismicEvent {
+                          id
+                          data {
+                            end_date(formatString: "YYYY")
+                            start_date(formatString: "YYYY")
+                            description {
+                              raw
+                            }
+                          }
+                        }
+                      }
+                    }
                   }
-                }
-              }
-            }
-          }
-        }
-        teaching {
-          event {
-            document {
-              ... on PrismicEvent {
-                id
-                data {
-                  active
-                  end_date(formatString: "YYYY")
-                  start_date(formatString: "YYYY")
-                  description {
-                    raw
-                  }
-                }
-              }
-            }
-          }
-        }
-        talks {
-          event {
-            document {
-              ... on PrismicEvent {
-                id
-                data {
-                  active
-                  end_date(formatString: "YYYY")
-                  start_date(formatString: "YYYY")
-                  description {
-                    raw
-                  }
-                }
-              }
-            }
-          }
-        }
-        research {
-          event {
-            document {
-              ... on PrismicEvent {
-                id
-                data {
-                  active
-                  start_date(formatString: "YYYY")
-                  end_date(formatString: "YYYY")
-                  description {
-                    raw
-                  }
-                }
-              }
-            }
-          }
-        }
-        other {
-          event {
-            document {
-              ... on PrismicEvent {
-                id
-                data {
-                  active
-                  start_date(formatString: "YYYY")
-                  end_date(formatString: "YYYY")
-                  description {
-                    raw
-                  }
-                }
-              }
-            }
-          }
-        }
-        memberships {
-          event {
-            document {
-              ... on PrismicEvent {
-                id
-                data {
-                  active
-                  end_date(formatString: "YYYY")
-                  start_date(formatString: "YYYY")
-                  description {
-                    raw
-                  }
-                }
-              }
-            }
-          }
-        }
-        experiments {
-          event {
-            document {
-              ... on PrismicEvent {
-                id
-                data {
-                  active
-                  start_date(formatString: "YYYY")
-                  end_date(formatString: "YYYY")
-                  description {
-                    raw
-                  }
-                }
-              }
-            }
-          }
-        }
-        current {
-          document {
-            ... on PrismicEvent {
-              id
-              data {
-                active
-                end_date(formatString: "YYYY")
-                start_date(formatString: "YYYY")
-                description {
-                  raw
                 }
               }
             }
@@ -206,6 +49,7 @@ export const query = graphql`
       last_publication_date(formatString: "MMMM YYYY")
     }
   }
+
 `
 
 const MoreContainer = styled.div`
@@ -311,24 +155,15 @@ const groupEventsByYear = (keys, data) => {
 const More = () => {
   const data = useStaticQuery(query)
   const resume = data.prismicResume.data;
-  console.log(data);
-  const current = {
-    date: generateDate(resume.current.document.data),
-    descriptions: [resume.current.document.data.description.raw]
-  };
+  const sections = resume.sections.map(s => s.section.document.data).reduce((prev, curr) => {
+    prev[curr.title] = curr.events;
+    prev.order = [...prev.order, curr.title]
+    return prev;
+  }, {
+    order: []
+  });
   
-  const listings = groupEventsByYear([
-    'research', 
-    'education',
-    'publications',
-    'experiments',
-    'teaching', 
-    'conferences', 
-    'talks', 
-    'awards', 
-    'memberships', 
-    'other'
-  ], resume);
+  const listings = groupEventsByYear(sections.order, sections);
   
   //individual components
   const profile_photo = resume.profile_photo.url;
@@ -344,7 +179,6 @@ const More = () => {
               <Resume 
                 photo={profile_photo}
                 bio={bio}
-                current={current}
                 listings={listings}
               />
               <p>Last Updated {data.prismicResume.last_publication_date}</p>
