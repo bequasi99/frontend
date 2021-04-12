@@ -211,6 +211,7 @@ export const query = graphql`
 const MoreContainer = styled.div`
   position: relative;
   padding: 82px 18px 20px 18px;
+  overflow-x: hidden;
   @media ${props => props.theme.breakpoint.lg} {
     padding: 82px 216px 50px 25px;
   }

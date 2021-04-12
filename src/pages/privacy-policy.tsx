@@ -25,6 +25,7 @@ const PrivacyPolicyContainer = styled.div`
   position: relative;
   padding: 82px 18px 20px 18px;
   width: 100%;
+  overflow-x: hidden;
   @media ${props => props.theme.breakpoint.lg} {
     padding: 82px 216px 50px 25px;
   }
