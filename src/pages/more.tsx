@@ -32,6 +32,7 @@ export const query = graphql`
                           data {
                             end_date(formatString: "YYYY")
                             start_date(formatString: "YYYY")
+                            active
                             description {
                               raw
                             }
