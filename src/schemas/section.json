@@ -1,0 +1,27 @@
+{
+  "Main" : {
+    "title" : {
+      "type" : "Text",
+      "config" : {
+        "label" : "Title",
+        "placeholder" : "Title of Section"
+      }
+    },
+    "events" : {
+      "type" : "Group",
+      "config" : {
+        "fields" : {
+          "event" : {
+            "type" : "Link",
+            "config" : {
+              "select" : "document",
+              "customtypes" : [ "event" ],
+              "label" : "Event"
+            }
+          }
+        },
+        "label" : "Events"
+      }
+    }
+  }
+}

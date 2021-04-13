@@ -29,6 +29,10 @@ module.exports = {
         schemas: {
           item: require("./src/schemas/item.json"),
           order: require("./src/schemas/order.json"),
+          legal: require("./src/schemas/legal.json"),
+          event: require("./src/schemas/event.json"),
+          section: require("./src/schemas/section.json"),
+          resume: require("./src/schemas/resume.json")
         },
       },
     },
@@ -93,6 +97,7 @@ module.exports = {
               left: "0",
               right: "0",
               bottom: "0",
+              padding: "0",
             },
           },
         },
