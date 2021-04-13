@@ -14,212 +14,58 @@ export const query = graphql`
         biography {
           raw
         }
-        awards {
-          event {
-            document {
-              ... on PrismicEvent {
-                id
-                data {
-                  active
-                  end_date(formatString: "YYYY")
-                  start_date(formatString: "YYYY")
-                  description {
-                    raw
-                  }
-                }
-              }
-            }
-          }
-        }
-        conferences {
-          event {
-            document {
-              ... on PrismicEvent {
-                id
-                data {
-                  active
-                  end_date(formatString: "YYYY")
-                  start_date(formatString: "YYYY")
-                  description {
-                    raw
-                  }
-                }
-              }
-            }
-          }
-        }
-        education {
-          event {
-            document {
-              ... on PrismicEvent {
-                id
-                data {
-                  active
-                  end_date(formatString: "YYYY")
-                  start_date(formatString: "YYYY")
-                  description {
-                    raw
-                  }
-                }
-              }
-            }
-          }
-        }
         profile_photo {
           url
         }
-        publications {
-          event {
+        sections {
+          section {
             document {
-              ... on PrismicEvent {
+              ... on PrismicSection {
                 id
                 data {
-                  active
-                  end_date(formatString: "YYYY")
-                  start_date(formatString: "YYYY")
-                  description {
-                    raw
+                  title
+                  events {
+                    event {
+                      document {
+                        ... on PrismicEvent {
+                          id
+                          data {
+                            end_date(formatString: "YYYY")
+                            start_date(formatString: "YYYY")
+                            description {
+                              raw
+                            }
+                          }
+                        }
+                      }
+                    }
                   }
-                }
-              }
-            }
-          }
-        }
-        teaching {
-          event {
-            document {
-              ... on PrismicEvent {
-                id
-                data {
-                  active
-                  end_date(formatString: "YYYY")
-                  start_date(formatString: "YYYY")
-                  description {
-                    raw
-                  }
-                }
-              }
-            }
-          }
-        }
-        talks {
-          event {
-            document {
-              ... on PrismicEvent {
-                id
-                data {
-                  active
-                  end_date(formatString: "YYYY")
-                  start_date(formatString: "YYYY")
-                  description {
-                    raw
-                  }
-                }
-              }
-            }
-          }
-        }
-        research {
-          event {
-            document {
-              ... on PrismicEvent {
-                id
-                data {
-                  active
-                  start_date(formatString: "YYYY")
-                  end_date(formatString: "YYYY")
-                  description {
-                    raw
-                  }
-                }
-              }
-            }
-          }
-        }
-        other {
-          event {
-            document {
-              ... on PrismicEvent {
-                id
-                data {
-                  active
-                  start_date(formatString: "YYYY")
-                  end_date(formatString: "YYYY")
-                  description {
-                    raw
-                  }
-                }
-              }
-            }
-          }
-        }
-        memberships {
-          event {
-            document {
-              ... on PrismicEvent {
-                id
-                data {
-                  active
-                  end_date(formatString: "YYYY")
-                  start_date(formatString: "YYYY")
-                  description {
-                    raw
-                  }
-                }
-              }
-            }
-          }
-        }
-        experiments {
-          event {
-            document {
-              ... on PrismicEvent {
-                id
-                data {
-                  active
-                  start_date(formatString: "YYYY")
-                  end_date(formatString: "YYYY")
-                  description {
-                    raw
-                  }
-                }
-              }
-            }
-          }
-        }
-        current {
-          document {
-            ... on PrismicEvent {
-              id
-              data {
-                active
-                end_date(formatString: "YYYY")
-                start_date(formatString: "YYYY")
-                description {
-                  raw
                 }
               }
             }
           }
         }
       }
+      last_publication_date(formatString: "MMMM YYYY")
     }
   }
+
 `
 
 const MoreContainer = styled.div`
   position: relative;
-  padding: 82px 18px 156px 18px;
+  padding: 82px 18px 20px 18px;
+  overflow-x: hidden;
   @media ${props => props.theme.breakpoint.lg} {
-    padding: 82px 216px 227px 25px;
+    padding: 82px 216px 50px 25px;
   }
   
   @media ${props => props.theme.breakpoint.xl} {
-    padding: 82px 410px 233px 25px;
+    padding: 82px 410px 75px 25px;
   }
   
   @media ${props => props.theme.breakpoint.xxl} {
-    padding: 82px 575px 268px 25px;
+    padding: 82px 575px 100px 25px;
   }
 
   background-color: #fff;
@@ -254,8 +100,23 @@ const MoreContainer = styled.div`
 
   h2,
   h3,
-  p {
+  p, ul, li {
     margin-bottom: 30px;
+  }
+
+  ul, li {
+    list-style: initial;
+    padding: revert;
+  }
+  em {
+    font-style: revert;
+  }
+  strong {
+    font-weight: 700;
+  }
+  a {
+    text-decoration: underline;
+    cursor: pointer;
   }
 `
 
@@ -294,23 +155,15 @@ const groupEventsByYear = (keys, data) => {
 const More = () => {
   const data = useStaticQuery(query)
   const resume = data.prismicResume.data;
+  const sections = resume.sections.map(s => s.section.document.data).reduce((prev, curr) => {
+    prev[curr.title] = curr.events;
+    prev.order = [...prev.order, curr.title]
+    return prev;
+  }, {
+    order: []
+  });
   
-  const current = {
-    date: generateDate(resume.current.document.data),
-    descriptions: [resume.current.document.data.description.raw]
-  };
-  
-  const listings = groupEventsByYear([
-    'research', 
-    'education',
-    'publications',
-    'teaching', 
-    'conferences', 
-    'talks', 
-    'awards', 
-    'memberships', 
-    'other'
-  ], resume);
+  const listings = groupEventsByYear(sections.order, sections);
   
   //individual components
   const profile_photo = resume.profile_photo.url;
@@ -326,9 +179,9 @@ const More = () => {
               <Resume 
                 photo={profile_photo}
                 bio={bio}
-                current={current}
                 listings={listings}
               />
+              <p>Last Updated {data.prismicResume.last_publication_date}</p>
             </MoreContainer>
           </Layout>)}
     </ModalRoutingContext.Consumer>

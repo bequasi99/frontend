@@ -16,23 +16,25 @@ export const query = graphql`
           raw
         }
       }
+      last_publication_date(formatString: "MMMM YYYY")
     }
   }
 `
 
 const CookiePolicyContainer = styled.div`
   position: relative;
-  padding: 82px 18px 156px 18px;
+  padding: 82px 18px 20px 18px;
+  overflow-x: hidden;
   @media ${props => props.theme.breakpoint.lg} {
-    padding: 82px 216px 227px 25px;
+    padding: 82px 216px 50px 25px;
   }
   
   @media ${props => props.theme.breakpoint.xl} {
-    padding: 82px 410px 233px 25px;
+    padding: 82px 410px 75px 25px;
   }
   
   @media ${props => props.theme.breakpoint.xxl} {
-    padding: 82px 575px 268px 25px;
+    padding: 82px 575px 100px 25px;
   }
   background-color: #fff;
 
@@ -66,8 +68,23 @@ const CookiePolicyContainer = styled.div`
 
   h2,
   h3,
-  p {
+  p, ul, li {
     margin-bottom: 30px;
+  }
+
+  ul, li {
+    list-style: initial;
+    padding: revert;
+  }
+  em {
+    font-style: revert;
+  }
+  strong {
+    font-weight: 700;
+  }
+  a {
+    text-decoration: underline;
+    cursor: pointer;
   }
 `
 
@@ -87,6 +104,7 @@ const CookiePolicy = () => {
                   Close
                 </Link>
                 {RichText.render(body)}
+                <p>Last Updated {data.prismicLegal.last_publication_date}</p>
               </CookiePolicyContainer>
             </Layout>
           )
@@ -97,6 +115,7 @@ const CookiePolicy = () => {
                 Close
               </Link>
               {RichText.render(body)}
+              <p>Last Updated {data.prismicLegal.last_publication_date}</p>
             </CookiePolicyContainer>
           </Layout>
         )

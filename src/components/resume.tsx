@@ -68,10 +68,6 @@ const Resume = ({
     <div className="block">
       {RichText.render(bio)}
     </div>
-    <div className="block">
-      <h2 className="resume">Current</h2>
-      <Event {...current} />
-    </div>
     {listings.map(({blockName, events}, i) => (
       <div className="block" key={i}>
         <h2 className="resume">{blockName}</h2>
