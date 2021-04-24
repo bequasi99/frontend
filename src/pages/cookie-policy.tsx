@@ -85,6 +85,10 @@ const CookiePolicyContainer = styled.div`
   a {
     text-decoration: underline;
     cursor: pointer;
+    color: #000;
+  }
+  a:visited {
+    color: #000;
   }
 `
 
