@@ -124,7 +124,7 @@ const Footer = () => {
             target="_blank"
             rel="noreferrer"
           >
-            Marta Puchalła
+            Marta Puchała
           </a>
         </div>
         <div>
