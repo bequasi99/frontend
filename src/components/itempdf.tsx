@@ -22,7 +22,7 @@ const Itempdf = props => {
         <img src={item.icon.url} className="pdf-icon" alt="pdf download" />
       </div>
       <div className="small-font pdf-link-name">
-        <span className={inView ? "snap" : ""}>{item.download.raw.name}</span>
+        <span className={inView ? "snap" : ""}>{item.download.url.match(/\/([^\/]+)$/)[1]}</span>
       </div>
     </a>
   )
