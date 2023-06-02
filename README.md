@@ -1,3 +1,3 @@
 # weQuasi
 
-weQuasi Portfolio Site
+weQuasi Portfolio Site.
