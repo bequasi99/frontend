@@ -25,7 +25,7 @@ const MainContent = () => {
   return (
     <div id="mainContent" className="item">
       <p className="large-font">
-        be quasi is being developed by Tim Miller as a type of design and social analysis 
+        be quasi is being developed by Tim Miller as a type of design research 
         called quasi-design. <LinkContainer>
           <Link
             className="large-font link"
