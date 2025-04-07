@@ -62,5 +62,8 @@
     "start": "npm run develop",
     "serve": "gatsby serve",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\""
+  },
+  "engines": {
+    "node": "18.x"
   }
 }
