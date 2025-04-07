@@ -2,7 +2,7 @@
   "name": "wequasi",
   "private": true,
   "description": "wequasi site built using gatsby and contentful",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "author": "@adamjw3",
   "dependencies": {
     "formik": "^2.1.4",
